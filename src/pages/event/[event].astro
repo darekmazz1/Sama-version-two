@@ -1,0 +1,30 @@
+---
+import { GetInformation } from '../../api/ApiGetInformation';
+import EventInformation from '../../content/events/EventInformation.astro';
+import Layout from '../../layouts/Layout.astro';
+
+import Eventhead from '../../content/events/Eventhead.astro';
+import EventGallery from '../../content/events/EventGallery.astro';
+import EventHighlights from '../../content/events/EventHighlights.astro';
+
+export async function getStaticPaths() {
+  const { data } = await GetInformation({ url: 'events?populate[image][fields]=url' });
+  const map_data = data?.data;
+
+  return map_data.map((event) => ({
+    params: { event: event.id.toString() },
+  }));
+}
+
+const { event } = Astro.params;
+const { data } = await GetInformation({ url: `events/${event}?populate[image][fields]=url&populate[gallery][fields]=url` });
+---
+
+<Layout title='Welcome to Astro.'>
+  <main class='bg-dark_blue pt-[120px] md:pt-0'>
+    <Eventhead data={data} />
+    <EventInformation data={data} />
+    <EventGallery data={data} />
+    <EventHighlights data={data} />
+  </main>
+</Layout>

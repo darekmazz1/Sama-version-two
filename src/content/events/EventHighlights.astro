@@ -1,0 +1,21 @@
+---
+import { parseText } from '../../utils/general';
+
+const { data } = Astro.props;
+const map_data = data?.data?.attributes;
+---
+
+<section>
+  <section class='text-white'>
+    <div class='container_all'>
+      {
+        map_data?.artists_performing && (
+          <div>
+            <h2 class='text-title_three font-bitter pt-[44px]'>Highlights</h2>
+            <p class='text-paragraph font-roboto mt-[32px]' set:html={parseText(map_data?.highlights)} />
+          </div>
+        )
+      }
+    </div>
+  </section>
+</section>

@@ -1,0 +1,19 @@
+---
+import Button from '../../components/buttons/Button';
+import Titles from '../../components/fonts/Titles.astro';
+import EventsSlide from '../../components/swiper/EventsSlide';
+
+const { data } = Astro.props;
+---
+
+<section class='pt-general md:pt-general_desktop'>
+  <Titles one='Upcoming' two='Events' />
+
+  <EventsSlide client:load data={data} />
+
+  <div class='mt-[22px] flex justify-end'>
+    <a href='/calendar'>
+      <Button client:visible text='View all events' style='bg-purple' />
+    </a>
+  </div>
+</section>

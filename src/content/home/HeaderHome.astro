@@ -1,0 +1,19 @@
+---
+import SvgLogo from '../../svg/SvgLogo';
+import { parseText } from '../../utils/general';
+const { data } = Astro.props;
+const map_data = data?.data?.attributes;
+---
+
+<section class='md:flex md:gap-[40px] md:justify-center pt-general md:pt-general_desktop'>
+  <div class='md:w-[400px]'>
+    <div class='w-[200px] md:w-[220px] m-auto pb-general md:pb-0'>
+      <SvgLogo />
+    </div>
+  </div>
+
+  <div class='md:w-[400px]'>
+    <p class='text-title font-playfair'>{map_data?.banner_title}</p>
+    <p class='text-paragraph pt-general_two pb-general font-sans' set:html={parseText(map_data?.banner_description)} />
+  </div>
+</section>

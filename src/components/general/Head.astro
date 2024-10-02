@@ -1,0 +1,10 @@
+---
+const { text } = Astro.props;
+const { style } = Astro.props;
+---
+
+<section class='w-full bg-pink'>
+  <div class='container_all'>
+    <p class={`text-[40px] font-playfair py-[16px] text-center font-[700] ${style}`}>{text}</p>
+  </div>
+</section>

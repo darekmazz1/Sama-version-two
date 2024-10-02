@@ -1,0 +1,1352 @@
+[
+  {
+    "id": 1,
+    "attributes": {
+      "event_title": "Desert Winds",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-01-02T02:48:34 +05:00",
+      "updatedAt": "2024-12-05T06:08:19 +05:00",
+      "publishedAt": "2024-11-21T11:26:43 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-05-30",
+      "artists_performing": "Voluptate adipisicing aliqua amet non ex velit veniam ad nulla. Exercitation sunt voluptate dolor dolore fugiat reprehenderit aliqua exercitation.",
+      "event_schedule": "Commodo nostrud ipsum ullamco irure consectetur minim. Ea non ex pariatur laborum reprehenderit ipsum deserunt laboris.",
+      "highlights": "Reprehenderit do eiusmod fugiat anim eu fugiat est eiusmod enim dolore sunt pariatur.",
+      "gallery_description": "Officia ullamco ipsum nisi ex laboris nisi sit amet.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 2,
+    "attributes": {
+      "event_title": "Sunset Serenade",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-09-09T10:06:59 +05:00",
+      "updatedAt": "2024-01-17T01:20:17 +05:00",
+      "publishedAt": "2024-03-18T06:46:45 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-09-03",
+      "artists_performing": "Sunt velit veniam sunt adipisicing. Enim commodo do deserunt qui velit nostrud labore.",
+      "event_schedule": "Fugiat sit excepteur sint Lorem do voluptate veniam culpa nostrud ex non. Ad sunt ullamco eiusmod enim enim.",
+      "highlights": "Nostrud aliquip eiusmod laboris ullamco tempor voluptate sint elit eu amet commodo commodo.",
+      "gallery_description": "Do laboris eu occaecat veniam duis sunt ut ipsum est mollit dolore cupidatat ad ex.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 3,
+    "attributes": {
+      "event_title": "Sunset Serenade",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-05-30T07:43:52 +05:00",
+      "updatedAt": "2024-04-26T04:56:09 +05:00",
+      "publishedAt": "2024-04-26T04:34:10 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-08-03",
+      "artists_performing": "Laborum in culpa incididunt elit est ut non anim. Pariatur Lorem minim in sint amet ea ipsum mollit et eiusmod cillum eiusmod Lorem.",
+      "event_schedule": "Laborum qui eiusmod ex eiusmod amet ea mollit minim laborum commodo. Enim ad velit ullamco qui enim eu amet sint.",
+      "highlights": "Dolor ad amet amet aliqua.",
+      "gallery_description": "Consectetur occaecat irure Lorem ex.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 4,
+    "attributes": {
+      "event_title": "Desert Winds",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-02-08T08:00:40 +05:00",
+      "updatedAt": "2024-03-25T11:15:06 +05:00",
+      "publishedAt": "2024-03-13T02:25:14 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-10-22",
+      "artists_performing": "Velit deserunt excepteur laboris qui anim dolor Lorem ullamco. Veniam velit proident veniam duis laboris labore minim sit ex ipsum.",
+      "event_schedule": "Ea Lorem aliquip occaecat ad minim elit eu quis id. Consectetur culpa incididunt nisi amet.",
+      "highlights": "Occaecat qui dolore elit est.",
+      "gallery_description": "Deserunt ut ad aute proident commodo qui incididunt est deserunt do esse labore et adipisicing.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 5,
+    "attributes": {
+      "event_title": "Mountain Echoes",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-05-17T12:22:27 +05:00",
+      "updatedAt": "2024-06-11T01:05:24 +05:00",
+      "publishedAt": "2024-12-29T06:22:44 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-06-17",
+      "artists_performing": "Et velit laborum ad officia qui ea laboris esse. Veniam et deserunt quis magna pariatur commodo pariatur eu reprehenderit ex incididunt.",
+      "event_schedule": "Incididunt mollit fugiat laborum tempor ipsum sint. Elit eiusmod labore fugiat minim minim magna culpa adipisicing ad ex esse ut.",
+      "highlights": "Elit aute occaecat velit ut ut ut eu reprehenderit.",
+      "gallery_description": "Ipsum elit sunt eiusmod proident ea consequat excepteur magna ex aliquip aliquip ut Lorem.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 6,
+    "attributes": {
+      "event_title": "Desert Winds",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-12-06T10:51:38 +05:00",
+      "updatedAt": "2024-10-23T04:28:20 +05:00",
+      "publishedAt": "2024-06-03T08:51:42 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-01-05",
+      "artists_performing": "Nisi amet cillum nostrud sint ut voluptate enim enim voluptate tempor ad nostrud. Magna duis reprehenderit mollit sint eiusmod enim reprehenderit.",
+      "event_schedule": "Anim quis magna commodo exercitation cillum amet cillum Lorem commodo in ipsum adipisicing sunt aliqua. Deserunt anim elit irure cupidatat et veniam deserunt nostrud qui anim cupidatat.",
+      "highlights": "Duis amet eu velit dolor do occaecat.",
+      "gallery_description": "Minim non Lorem nisi occaecat.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 7,
+    "attributes": {
+      "event_title": "River Rhythms",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-12-29T11:27:20 +05:00",
+      "updatedAt": "2024-05-26T09:37:35 +05:00",
+      "publishedAt": "2024-04-20T11:38:30 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-03-11",
+      "artists_performing": "Cupidatat non dolore quis exercitation incididunt deserunt non. Excepteur qui amet ullamco nulla eu sit amet et ut et veniam laborum voluptate.",
+      "event_schedule": "Elit do proident exercitation sunt nisi ipsum nulla non occaecat elit consectetur sit voluptate excepteur. Consequat ex labore ex est eu.",
+      "highlights": "Ea ut consequat do non deserunt do et cillum elit aliqua pariatur ex.",
+      "gallery_description": "Amet proident commodo elit culpa labore non non anim id ea fugiat aute proident.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 8,
+    "attributes": {
+      "event_title": "Northern Lights",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-01-10T12:40:24 +05:00",
+      "updatedAt": "2024-09-03T12:53:31 +05:00",
+      "publishedAt": "2024-05-09T10:00:36 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-08-10",
+      "artists_performing": "Id aliquip reprehenderit occaecat non commodo excepteur ipsum irure qui est labore ipsum nulla. Reprehenderit cillum aute proident dolor id Lorem et reprehenderit laborum sit mollit.",
+      "event_schedule": "Deserunt id esse mollit voluptate cillum ea aliquip elit mollit duis quis quis elit exercitation. Nostrud culpa ullamco minim sit do dolore consectetur do.",
+      "highlights": "Elit laborum excepteur adipisicing officia dolor ullamco.",
+      "gallery_description": "Sint quis ut nisi sit ullamco occaecat velit consectetur ullamco irure ipsum et.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 9,
+    "attributes": {
+      "event_title": "Moonlit Melodies",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-04-15T08:50:36 +05:00",
+      "updatedAt": "2024-02-21T07:21:12 +05:00",
+      "publishedAt": "2024-05-22T02:41:57 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-01-04",
+      "artists_performing": "Consectetur minim minim ad consequat. Cupidatat nisi deserunt nulla proident reprehenderit adipisicing Lorem dolor Lorem consectetur ea.",
+      "event_schedule": "Quis non non dolore cillum eiusmod id. Duis incididunt consequat ex et elit excepteur officia quis commodo.",
+      "highlights": "Nisi velit eiusmod enim nulla Lorem fugiat Lorem cillum anim.",
+      "gallery_description": "Excepteur occaecat eiusmod cillum do velit.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 10,
+    "attributes": {
+      "event_title": "Desert Winds",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-12-23T12:21:29 +05:00",
+      "updatedAt": "2024-10-06T03:39:52 +05:00",
+      "publishedAt": "2024-12-11T12:55:47 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-07-30",
+      "artists_performing": "Anim excepteur labore nisi laborum ut quis deserunt incididunt mollit ea fugiat mollit. Consequat velit non laboris do excepteur in ea nisi sint excepteur qui nisi.",
+      "event_schedule": "Et laboris voluptate veniam tempor duis voluptate et est duis duis. Consequat proident dolor esse sit culpa tempor irure quis pariatur nisi sint.",
+      "highlights": "Id laborum cupidatat cupidatat minim aliqua pariatur Lorem labore irure fugiat ea Lorem.",
+      "gallery_description": "Pariatur labore et eiusmod minim ipsum consequat ut magna esse magna.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 11,
+    "attributes": {
+      "event_title": "Desert Winds",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-08-15T07:29:08 +05:00",
+      "updatedAt": "2024-03-21T09:35:17 +05:00",
+      "publishedAt": "2024-06-06T08:49:11 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-09-09",
+      "artists_performing": "Et officia fugiat nisi occaecat ex. Aute ullamco do duis ad proident duis pariatur ex eiusmod ut labore eiusmod dolor enim.",
+      "event_schedule": "Occaecat est veniam nulla sit. Enim commodo pariatur in pariatur in est ullamco id cupidatat enim incididunt amet.",
+      "highlights": "Est sit consectetur aute pariatur magna mollit.",
+      "gallery_description": "Exercitation deserunt incididunt quis excepteur laborum ullamco non deserunt exercitation id id non dolore.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 12,
+    "attributes": {
+      "event_title": "Desert Winds",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-07-02T01:29:59 +05:00",
+      "updatedAt": "2024-12-19T06:13:48 +05:00",
+      "publishedAt": "2024-10-21T02:47:18 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-02-24",
+      "artists_performing": "Ea enim occaecat consequat officia do irure. Velit aliquip ad amet deserunt magna veniam reprehenderit reprehenderit duis excepteur adipisicing reprehenderit quis culpa.",
+      "event_schedule": "Irure in in ullamco duis laborum sunt duis. Officia culpa ipsum est velit deserunt dolor.",
+      "highlights": "Fugiat laboris qui duis elit in.",
+      "gallery_description": "Quis minim aliquip et fugiat quis veniam cupidatat quis qui amet officia ad nostrud.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 13,
+    "attributes": {
+      "event_title": "Mountain Echoes",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-06-27T01:52:53 +05:00",
+      "updatedAt": "2024-07-03T06:42:27 +05:00",
+      "publishedAt": "2024-04-27T02:27:39 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-07-09",
+      "artists_performing": "Nulla ut exercitation qui mollit irure est eu proident. Amet incididunt deserunt dolore in.",
+      "event_schedule": "Magna laboris aliqua sit esse exercitation incididunt in velit dolor excepteur proident esse ea ex. Tempor eu incididunt consectetur irure enim proident.",
+      "highlights": "Nisi qui nulla amet incididunt magna sunt anim commodo culpa.",
+      "gallery_description": "Do elit non ipsum magna sit.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 14,
+    "attributes": {
+      "event_title": "Jungle Beats",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-07-20T11:05:57 +05:00",
+      "updatedAt": "2024-07-08T02:28:34 +05:00",
+      "publishedAt": "2024-03-16T07:26:00 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-12-15",
+      "artists_performing": "Culpa elit voluptate cillum id pariatur est officia commodo mollit. Dolor sint fugiat cillum et.",
+      "event_schedule": "Sit ea sunt occaecat velit anim reprehenderit magna minim duis. Sint aliquip sit laboris ullamco nisi minim enim et in amet.",
+      "highlights": "Velit laborum officia enim sit enim excepteur aliquip excepteur duis officia non voluptate veniam.",
+      "gallery_description": "Irure sint aliqua dolore mollit esse irure irure magna ea quis velit sunt elit.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 15,
+    "attributes": {
+      "event_title": "Northern Lights",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-02-18T08:17:49 +05:00",
+      "updatedAt": "2024-06-05T08:07:11 +05:00",
+      "publishedAt": "2024-06-22T06:17:21 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-03-24",
+      "artists_performing": "Laborum nostrud commodo sint elit qui id amet laborum. In ipsum sint cillum ut.",
+      "event_schedule": "Excepteur dolore elit aliqua consectetur. Ad sit deserunt minim exercitation consectetur culpa duis.",
+      "highlights": "Culpa est occaecat voluptate velit commodo est non sunt.",
+      "gallery_description": "Sunt cupidatat ipsum amet anim et et amet laborum minim laboris cupidatat excepteur tempor.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 16,
+    "attributes": {
+      "event_title": "Desert Winds",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-09-03T07:43:22 +05:00",
+      "updatedAt": "2024-04-07T11:21:10 +05:00",
+      "publishedAt": "2024-06-09T05:56:32 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-07-26",
+      "artists_performing": "Tempor voluptate ut dolor duis do esse adipisicing voluptate est do ad ex sint. Enim ex Lorem ullamco nostrud id.",
+      "event_schedule": "Velit irure nostrud labore adipisicing mollit. Incididunt reprehenderit magna mollit pariatur voluptate id minim pariatur et enim enim pariatur sunt.",
+      "highlights": "Anim in tempor aliquip veniam sint elit sit et in veniam.",
+      "gallery_description": "Tempor est aliquip qui mollit elit laboris esse amet labore quis.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 17,
+    "attributes": {
+      "event_title": "Mountain Echoes",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-11-21T11:50:10 +05:00",
+      "updatedAt": "2024-03-31T03:32:53 +05:00",
+      "publishedAt": "2024-02-12T01:37:08 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-09-24",
+      "artists_performing": "Eiusmod Lorem incididunt sunt ullamco nulla duis ea amet cupidatat dolor amet labore do. Duis aute officia magna laboris voluptate sit adipisicing.",
+      "event_schedule": "Laborum quis amet nisi laborum nisi consequat pariatur enim. In veniam in aute adipisicing excepteur tempor quis minim pariatur esse occaecat ipsum.",
+      "highlights": "Culpa sit nostrud mollit mollit minim non veniam aliqua incididunt nisi non ipsum nostrud.",
+      "gallery_description": "Irure laborum ex excepteur excepteur reprehenderit ipsum non laboris ex sunt.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 18,
+    "attributes": {
+      "event_title": "Moonlit Melodies",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-12-24T08:19:23 +05:00",
+      "updatedAt": "2024-06-04T06:53:19 +05:00",
+      "publishedAt": "2024-10-30T12:43:29 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-12-08",
+      "artists_performing": "Amet enim deserunt excepteur sit pariatur. Eu voluptate in sint ea sit ullamco dolor in reprehenderit Lorem nulla velit.",
+      "event_schedule": "Consequat amet dolor velit irure magna duis quis id duis officia enim aliqua cillum. Anim ea cillum occaecat officia eiusmod voluptate ea sunt esse dolor anim fugiat cupidatat commodo.",
+      "highlights": "Do voluptate laboris Lorem incididunt reprehenderit.",
+      "gallery_description": "Aute nulla ex ea in dolore minim minim irure.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 19,
+    "attributes": {
+      "event_title": "Desert Winds",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-02-09T11:49:07 +05:00",
+      "updatedAt": "2024-06-07T05:31:22 +05:00",
+      "publishedAt": "2024-08-14T03:57:19 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-09-27",
+      "artists_performing": "Labore sit Lorem cupidatat eiusmod cillum. Eiusmod occaecat ullamco enim non laborum cillum sunt minim in reprehenderit nisi laborum esse.",
+      "event_schedule": "Dolore aliqua sint reprehenderit irure minim do non ipsum ullamco ad nostrud veniam. Aliqua nulla voluptate ut occaecat reprehenderit in excepteur labore incididunt velit pariatur aliqua nostrud qui.",
+      "highlights": "Nulla tempor eiusmod mollit quis ullamco duis laboris aliqua pariatur.",
+      "gallery_description": "Qui proident eiusmod veniam amet.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 20,
+    "attributes": {
+      "event_title": "Oceanic Dreams",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-01-19T05:20:48 +05:00",
+      "updatedAt": "2024-10-15T07:52:38 +05:00",
+      "publishedAt": "2024-10-21T09:35:09 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-08-04",
+      "artists_performing": "Sint nostrud proident minim sint fugiat consequat. Aute aliqua incididunt fugiat occaecat cillum irure duis commodo ipsum reprehenderit.",
+      "event_schedule": "Id pariatur esse cupidatat reprehenderit aute nisi in minim ex proident Lorem ipsum proident sunt. Laborum proident reprehenderit amet ea reprehenderit exercitation et aute reprehenderit id.",
+      "highlights": "Cillum ullamco tempor incididunt consectetur occaecat eiusmod esse velit reprehenderit cupidatat laboris dolore sit.",
+      "gallery_description": "Excepteur non in nulla minim eiusmod nulla velit incididunt.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 21,
+    "attributes": {
+      "event_title": "Echoes of the Forest",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-09-11T09:11:13 +05:00",
+      "updatedAt": "2024-11-07T05:21:26 +05:00",
+      "publishedAt": "2024-09-05T02:44:45 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-04-30",
+      "artists_performing": "Pariatur tempor officia cupidatat esse labore ullamco quis culpa irure dolor dolore consequat. Culpa qui ipsum irure tempor occaecat eiusmod nulla.",
+      "event_schedule": "Irure anim irure nostrud esse et duis irure veniam ex culpa. Laborum qui sint minim quis incididunt fugiat reprehenderit.",
+      "highlights": "Reprehenderit sint aliquip officia laborum cillum adipisicing dolor sit eiusmod adipisicing Lorem nisi dolor incididunt.",
+      "gallery_description": "Magna fugiat ea incididunt cillum deserunt cupidatat.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 22,
+    "attributes": {
+      "event_title": "Jungle Beats",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-08-28T04:52:23 +05:00",
+      "updatedAt": "2024-06-04T01:42:34 +05:00",
+      "publishedAt": "2024-02-02T09:54:59 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-06-03",
+      "artists_performing": "Dolor sit reprehenderit enim ullamco magna enim labore. Lorem commodo commodo nostrud in exercitation aliqua magna consequat exercitation voluptate proident cillum.",
+      "event_schedule": "Ea culpa consequat in dolore sint aliqua ullamco commodo aute ad ut Lorem nulla. Adipisicing velit occaecat labore elit voluptate occaecat.",
+      "highlights": "Labore dolore exercitation tempor tempor aute aliqua occaecat labore excepteur.",
+      "gallery_description": "Minim duis ut amet commodo Lorem est reprehenderit.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 23,
+    "attributes": {
+      "event_title": "Oceanic Dreams",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-02-02T01:33:22 +05:00",
+      "updatedAt": "2024-01-25T11:00:54 +05:00",
+      "publishedAt": "2024-10-11T08:36:48 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-01-21",
+      "artists_performing": "Consectetur sunt commodo est cillum. Voluptate non et labore aliqua cupidatat dolore.",
+      "event_schedule": "Duis magna sit officia elit ea cillum do nulla esse. Elit aliquip adipisicing ullamco minim nisi occaecat consectetur.",
+      "highlights": "Enim eiusmod reprehenderit sit ullamco incididunt cillum duis sunt.",
+      "gallery_description": "Sit eiusmod nisi commodo sunt.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 24,
+    "attributes": {
+      "event_title": "Oceanic Dreams",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-02-19T09:28:43 +05:00",
+      "updatedAt": "2024-07-06T02:46:15 +05:00",
+      "publishedAt": "2024-11-04T01:04:24 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-11-25",
+      "artists_performing": "Cillum id exercitation irure ea nostrud irure dolor irure id et nisi laborum. Minim cupidatat cupidatat commodo mollit veniam do eu eu incididunt deserunt labore sit quis.",
+      "event_schedule": "Culpa duis incididunt ad minim sit reprehenderit ea officia duis esse. Lorem cillum commodo sint pariatur non reprehenderit sint mollit officia sint et irure.",
+      "highlights": "Dolor velit sunt aliqua quis ullamco aliquip quis reprehenderit consequat consectetur.",
+      "gallery_description": "Lorem velit aliqua aliquip aute commodo.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 25,
+    "attributes": {
+      "event_title": "Northern Lights",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-11-01T06:53:54 +05:00",
+      "updatedAt": "2024-02-19T03:19:29 +05:00",
+      "publishedAt": "2024-12-30T06:20:13 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-03-12",
+      "artists_performing": "Duis voluptate deserunt veniam tempor tempor dolore veniam veniam eiusmod elit est. Dolore pariatur dolore pariatur dolor nostrud deserunt occaecat id proident labore pariatur duis.",
+      "event_schedule": "Elit eu aliqua nulla sint sit nostrud fugiat aliqua ipsum irure cupidatat eiusmod. Ex fugiat ut adipisicing aute irure tempor duis amet dolor in consequat.",
+      "highlights": "Sunt do dolore magna aute ipsum do ullamco magna consequat.",
+      "gallery_description": "Non elit veniam veniam eu ut culpa occaecat sit consectetur labore.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 26,
+    "attributes": {
+      "event_title": "Jungle Beats",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-11-02T11:55:46 +05:00",
+      "updatedAt": "2024-08-12T07:00:43 +05:00",
+      "publishedAt": "2024-05-18T06:36:51 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-11-30",
+      "artists_performing": "Adipisicing eu adipisicing adipisicing reprehenderit esse est velit adipisicing magna pariatur. Excepteur elit eiusmod pariatur duis culpa cupidatat fugiat exercitation labore nulla eu officia.",
+      "event_schedule": "Ullamco deserunt culpa est esse amet voluptate veniam sit voluptate cupidatat consequat nostrud. Esse minim incididunt aliqua quis ad duis id Lorem in nisi.",
+      "highlights": "Reprehenderit elit enim in deserunt cupidatat.",
+      "gallery_description": "Ullamco incididunt commodo ea adipisicing consectetur occaecat occaecat magna deserunt.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 27,
+    "attributes": {
+      "event_title": "Mountain Echoes",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-03-27T10:48:52 +05:00",
+      "updatedAt": "2024-01-02T07:04:50 +05:00",
+      "publishedAt": "2024-02-07T08:51:42 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-06-28",
+      "artists_performing": "Occaecat dolor ad adipisicing proident ad ut deserunt ut reprehenderit cillum sunt ex dolor. Aute irure officia ad veniam non.",
+      "event_schedule": "Duis sit aliquip culpa aliquip proident nisi amet adipisicing non dolore. Laborum Lorem magna sunt dolore ex labore excepteur.",
+      "highlights": "Consectetur proident enim velit fugiat mollit aute dolore anim.",
+      "gallery_description": "Laborum laborum in do ea.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 28,
+    "attributes": {
+      "event_title": "Northern Lights",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-08-22T09:03:54 +05:00",
+      "updatedAt": "2024-02-04T06:26:04 +05:00",
+      "publishedAt": "2024-01-24T09:49:17 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-02-25",
+      "artists_performing": "Magna fugiat ad esse magna Lorem magna elit anim irure incididunt sint. Est amet aute sint occaecat commodo reprehenderit ullamco irure proident amet tempor.",
+      "event_schedule": "Incididunt nisi eu et cillum consequat fugiat ad anim reprehenderit id. Ea tempor excepteur eiusmod nisi.",
+      "highlights": "Et mollit cillum cupidatat do dolore deserunt veniam sint qui laboris laboris.",
+      "gallery_description": "Eiusmod non non aliqua officia.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 29,
+    "attributes": {
+      "event_title": "Mountain Echoes",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-03-17T01:42:40 +05:00",
+      "updatedAt": "2024-06-07T09:19:43 +05:00",
+      "publishedAt": "2024-08-08T02:44:06 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-04-23",
+      "artists_performing": "Laborum quis aute magna duis cillum fugiat laboris Lorem nulla consectetur. Et exercitation veniam velit ullamco mollit ad veniam.",
+      "event_schedule": "Ipsum et deserunt cupidatat commodo voluptate. Sunt in irure duis adipisicing nostrud aliquip adipisicing amet.",
+      "highlights": "Excepteur quis non anim aliquip anim in aute dolore qui.",
+      "gallery_description": "Commodo est voluptate est nostrud amet dolore cillum exercitation.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 30,
+    "attributes": {
+      "event_title": "River Rhythms",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-01-04T03:12:00 +05:00",
+      "updatedAt": "2024-08-06T06:27:10 +05:00",
+      "publishedAt": "2024-12-01T10:13:09 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-06-27",
+      "artists_performing": "Cupidatat deserunt fugiat ut pariatur pariatur mollit. Magna amet laboris duis fugiat officia amet non anim.",
+      "event_schedule": "Sint voluptate exercitation cupidatat est do adipisicing qui tempor veniam. Incididunt ea ad aliqua eu cupidatat et nisi in.",
+      "highlights": "Dolor excepteur pariatur non ea.",
+      "gallery_description": "Sit officia nisi ut non ex eu duis consequat qui.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 31,
+    "attributes": {
+      "event_title": "River Rhythms",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-12-18T01:15:13 +05:00",
+      "updatedAt": "2024-09-24T08:55:37 +05:00",
+      "publishedAt": "2024-05-02T07:07:21 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-02-06",
+      "artists_performing": "Adipisicing nisi Lorem dolore pariatur nulla elit ea commodo et exercitation dolore nostrud excepteur. Ut sit magna incididunt sint est officia irure ad.",
+      "event_schedule": "Est culpa Lorem ea nostrud nisi sit quis. Ut non ad mollit irure dolore elit.",
+      "highlights": "Et nisi reprehenderit enim qui aliqua enim.",
+      "gallery_description": "Est dolore do magna velit fugiat.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 32,
+    "attributes": {
+      "event_title": "Echoes of the Forest",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-02-04T11:49:05 +05:00",
+      "updatedAt": "2024-05-17T10:59:41 +05:00",
+      "publishedAt": "2024-08-17T10:17:25 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-10-30",
+      "artists_performing": "Cupidatat est laboris adipisicing sit aliquip et velit voluptate laboris labore esse ex dolor. Labore culpa qui aliqua qui minim.",
+      "event_schedule": "Culpa ea magna sit sint ex mollit ipsum. Labore sint esse aute veniam.",
+      "highlights": "Aliquip nulla eu duis quis dolore laboris excepteur exercitation adipisicing quis reprehenderit nostrud proident.",
+      "gallery_description": "Irure qui cupidatat est fugiat nostrud consectetur.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 33,
+    "attributes": {
+      "event_title": "Sunset Serenade",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-03-14T01:31:36 +05:00",
+      "updatedAt": "2024-06-21T07:28:31 +05:00",
+      "publishedAt": "2024-10-29T09:30:11 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-07-19",
+      "artists_performing": "Consectetur ullamco enim minim pariatur irure labore consectetur in exercitation non mollit. Ea quis irure anim quis.",
+      "event_schedule": "Commodo minim id magna adipisicing id voluptate ut. Anim amet ea minim non eiusmod culpa excepteur aliqua in do.",
+      "highlights": "Dolor velit irure ut elit tempor esse et in ad esse ea.",
+      "gallery_description": "Ea sint anim voluptate id excepteur sit duis do magna.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 34,
+    "attributes": {
+      "event_title": "Oceanic Dreams",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-01-27T12:40:43 +05:00",
+      "updatedAt": "2024-01-27T07:38:43 +05:00",
+      "publishedAt": "2024-12-17T06:35:46 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-07-11",
+      "artists_performing": "Sint sint ipsum mollit officia. Minim nulla consectetur do aliquip occaecat.",
+      "event_schedule": "Sunt tempor deserunt culpa officia ullamco minim est est laboris ad non reprehenderit. Labore nostrud labore irure labore nisi.",
+      "highlights": "Anim cupidatat elit Lorem adipisicing incididunt eu pariatur duis anim eiusmod esse pariatur.",
+      "gallery_description": "Labore aliqua non nostrud irure ipsum est velit non labore officia nostrud minim.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 35,
+    "attributes": {
+      "event_title": "Mountain Echoes",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-07-31T06:49:55 +05:00",
+      "updatedAt": "2024-04-03T06:26:28 +05:00",
+      "publishedAt": "2024-06-09T03:36:42 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-01-11",
+      "artists_performing": "Aute laboris in culpa voluptate tempor quis sunt eu ullamco aliqua dolor irure. Ad sit dolore pariatur dolore nisi enim cillum laborum pariatur culpa.",
+      "event_schedule": "Ex sunt occaecat amet eu ullamco deserunt officia ipsum reprehenderit. Aliqua veniam incididunt ea tempor.",
+      "highlights": "Voluptate dolor ipsum consectetur eiusmod culpa irure ut qui.",
+      "gallery_description": "Mollit enim esse amet Lorem.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 36,
+    "attributes": {
+      "event_title": "Mountain Echoes",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-05-31T06:23:38 +05:00",
+      "updatedAt": "2024-11-10T06:27:55 +05:00",
+      "publishedAt": "2024-10-10T02:45:02 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-11-28",
+      "artists_performing": "Lorem ex consequat ut commodo ut est ut anim ut aute sunt nisi cillum. Sunt ipsum laboris anim voluptate.",
+      "event_schedule": "Occaecat qui non duis voluptate adipisicing eiusmod in non ea officia voluptate laborum Lorem. Laborum in aute qui irure anim voluptate nostrud anim mollit ea veniam ea.",
+      "highlights": "Deserunt quis enim et exercitation consectetur est excepteur culpa ipsum nulla sit.",
+      "gallery_description": "Proident elit dolor deserunt dolor in.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 37,
+    "attributes": {
+      "event_title": "Jungle Beats",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-05-07T10:50:43 +05:00",
+      "updatedAt": "2024-04-17T08:32:20 +05:00",
+      "publishedAt": "2024-09-15T12:35:41 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-04-03",
+      "artists_performing": "Dolore dolore sunt labore excepteur culpa voluptate nisi. Voluptate deserunt ullamco eu aliquip deserunt esse.",
+      "event_schedule": "Ipsum officia eu pariatur irure quis laboris reprehenderit pariatur nisi occaecat. Aliqua pariatur non aliqua aliquip quis pariatur.",
+      "highlights": "Elit deserunt sit duis cillum tempor ullamco nisi cupidatat ad aliqua.",
+      "gallery_description": "Laboris fugiat cillum laborum qui quis aute amet dolor.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 38,
+    "attributes": {
+      "event_title": "City Lights",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-10-20T11:46:35 +05:00",
+      "updatedAt": "2024-04-10T06:40:07 +05:00",
+      "publishedAt": "2024-04-01T01:56:44 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-07-05",
+      "artists_performing": "Non ipsum incididunt eu laborum mollit cillum do velit dolore. Consectetur exercitation dolore et non commodo amet esse enim irure esse officia.",
+      "event_schedule": "Ut tempor non eu officia. Aliquip tempor aliquip eiusmod ipsum reprehenderit consequat est quis.",
+      "highlights": "Qui veniam ea cillum laboris cillum anim aute in id non sunt consectetur.",
+      "gallery_description": "Reprehenderit ad duis culpa dolor quis pariatur nulla in magna eu amet sunt id.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 39,
+    "attributes": {
+      "event_title": "Jungle Beats",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-02-16T05:08:02 +05:00",
+      "updatedAt": "2024-07-20T06:46:56 +05:00",
+      "publishedAt": "2024-05-10T01:06:38 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-11-19",
+      "artists_performing": "Occaecat irure sunt eiusmod eu ea voluptate. Proident laboris aliquip sint qui occaecat et irure labore commodo eu pariatur occaecat.",
+      "event_schedule": "Cupidatat et esse et proident cillum aliquip voluptate adipisicing incididunt tempor ad. Consectetur officia laboris minim nulla sit consectetur non.",
+      "highlights": "Tempor magna exercitation labore nisi proident commodo.",
+      "gallery_description": "Eu consectetur aliqua deserunt tempor ad consequat est labore proident ea ut commodo nisi deserunt.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 40,
+    "attributes": {
+      "event_title": "Echoes of the Forest",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-08-25T06:35:20 +05:00",
+      "updatedAt": "2024-10-30T02:56:03 +05:00",
+      "publishedAt": "2024-06-07T09:03:47 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-05-26",
+      "artists_performing": "Do qui fugiat nisi ipsum non excepteur. Quis mollit officia voluptate aute sint veniam elit nisi ipsum mollit enim.",
+      "event_schedule": "Labore aliqua mollit in elit mollit aliqua est ex aliquip deserunt sit irure. Commodo voluptate id mollit excepteur fugiat cupidatat esse in ad id dolore.",
+      "highlights": "Exercitation esse sint officia incididunt elit cupidatat incididunt ea in est laboris.",
+      "gallery_description": "Laborum nisi do officia aliquip enim.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 41,
+    "attributes": {
+      "event_title": "Echoes of the Forest",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-03-16T11:53:39 +05:00",
+      "updatedAt": "2024-12-04T06:58:41 +05:00",
+      "publishedAt": "2024-02-06T11:21:27 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-09-11",
+      "artists_performing": "Commodo veniam irure ex pariatur id cillum elit anim dolor deserunt irure sit aliquip id. Qui incididunt veniam exercitation quis eu nostrud fugiat sit do dolore.",
+      "event_schedule": "Proident Lorem ex ea proident laborum eiusmod eiusmod velit dolor nulla est. Consectetur qui aliqua commodo proident nostrud dolor esse irure.",
+      "highlights": "Incididunt officia irure in ex nulla consectetur esse.",
+      "gallery_description": "Enim duis ex quis enim.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 42,
+    "attributes": {
+      "event_title": "Jungle Beats",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-02-08T03:14:00 +05:00",
+      "updatedAt": "2024-03-28T01:43:02 +05:00",
+      "publishedAt": "2024-08-28T09:16:10 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-06-11",
+      "artists_performing": "Enim cupidatat eiusmod amet consequat reprehenderit aliqua ipsum exercitation ipsum adipisicing. Ea officia incididunt excepteur enim magna dolore.",
+      "event_schedule": "Qui aliqua ipsum dolore excepteur commodo elit est aliqua occaecat nulla. Dolor nulla laboris aliqua labore ad pariatur est commodo nostrud excepteur eu non magna.",
+      "highlights": "Adipisicing eiusmod aute ex mollit excepteur pariatur anim est aliquip ex est officia mollit consectetur.",
+      "gallery_description": "Et aute exercitation culpa officia proident.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 43,
+    "attributes": {
+      "event_title": "Jungle Beats",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-12-30T05:53:36 +05:00",
+      "updatedAt": "2024-03-17T01:06:12 +05:00",
+      "publishedAt": "2024-11-17T07:28:31 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-08-29",
+      "artists_performing": "Consectetur irure esse irure ullamco nostrud voluptate. Ullamco ullamco culpa commodo in mollit ullamco.",
+      "event_schedule": "Voluptate nisi nostrud ea voluptate do reprehenderit nisi id. Consequat ut culpa esse est labore elit non qui labore commodo id excepteur ullamco voluptate.",
+      "highlights": "Eiusmod ad quis in aute nulla adipisicing quis.",
+      "gallery_description": "Sit esse est eu ex consectetur veniam nulla est dolor incididunt eiusmod velit.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 44,
+    "attributes": {
+      "event_title": "Desert Winds",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-09-01T06:12:52 +05:00",
+      "updatedAt": "2024-04-14T01:35:26 +05:00",
+      "publishedAt": "2024-02-16T09:14:31 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-11-20",
+      "artists_performing": "Et sunt consequat esse nostrud velit. Veniam est quis velit qui commodo reprehenderit dolor elit.",
+      "event_schedule": "Duis in veniam nostrud nostrud Lorem ea ad cillum labore in esse mollit sint. Nostrud aute labore ex et ad eiusmod eiusmod.",
+      "highlights": "Esse esse esse ullamco ipsum nulla cupidatat dolore proident fugiat labore esse eu ea.",
+      "gallery_description": "Reprehenderit anim excepteur enim amet ipsum quis deserunt fugiat incididunt.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 45,
+    "attributes": {
+      "event_title": "Desert Winds",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-04-08T07:58:59 +05:00",
+      "updatedAt": "2024-08-16T08:05:18 +05:00",
+      "publishedAt": "2024-09-09T06:28:14 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-12-26",
+      "artists_performing": "Enim nulla est pariatur Lorem ullamco quis officia dolore excepteur velit laboris. Non aute voluptate proident eiusmod laborum occaecat velit.",
+      "event_schedule": "Ex proident velit cillum tempor deserunt incididunt adipisicing dolore magna culpa labore. Aliqua voluptate tempor culpa ullamco duis eu ad.",
+      "highlights": "Occaecat ad est amet incididunt laboris est incididunt aute nulla nulla occaecat enim.",
+      "gallery_description": "Minim ullamco voluptate enim qui culpa velit pariatur veniam incididunt reprehenderit mollit.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 46,
+    "attributes": {
+      "event_title": "Oceanic Dreams",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-12-05T02:03:10 +05:00",
+      "updatedAt": "2024-02-07T11:03:41 +05:00",
+      "publishedAt": "2024-03-31T04:42:15 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-07-17",
+      "artists_performing": "Excepteur adipisicing ex dolor incididunt labore nisi magna proident. Mollit eiusmod do aliqua esse elit amet duis ex incididunt exercitation ad.",
+      "event_schedule": "Incididunt voluptate sit qui consectetur exercitation ad ad sint sint laboris. Ut magna cillum magna eiusmod irure nisi.",
+      "highlights": "Commodo anim consequat magna cupidatat eu nulla magna.",
+      "gallery_description": "Cupidatat proident ut consequat ullamco.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 47,
+    "attributes": {
+      "event_title": "Jungle Beats",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-07-02T03:22:41 +05:00",
+      "updatedAt": "2024-08-22T08:24:12 +05:00",
+      "publishedAt": "2024-05-20T03:52:07 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-07-28",
+      "artists_performing": "Cupidatat cupidatat pariatur ex irure laboris aute fugiat excepteur et pariatur. Elit in nulla nisi pariatur eu in consequat.",
+      "event_schedule": "Esse sit occaecat incididunt esse eu voluptate tempor id aliqua officia duis consequat ut excepteur. Velit sunt qui mollit voluptate labore nulla aliquip fugiat mollit culpa ipsum eu nisi labore.",
+      "highlights": "Non duis aliquip voluptate ea proident minim ipsum aute laboris aute ex velit.",
+      "gallery_description": "Est exercitation ipsum cillum voluptate in qui incididunt.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 48,
+    "attributes": {
+      "event_title": "Oceanic Dreams",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-01-01T10:44:46 +05:00",
+      "updatedAt": "2024-11-20T05:51:32 +05:00",
+      "publishedAt": "2024-08-13T07:19:37 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-06-07",
+      "artists_performing": "Sit proident tempor id amet officia amet voluptate adipisicing ut dolore ipsum non aliquip. Aliquip amet enim magna minim adipisicing veniam occaecat ad tempor.",
+      "event_schedule": "Ea incididunt Lorem fugiat sint ut id minim sunt labore. Irure et commodo ea proident adipisicing nulla enim.",
+      "highlights": "Amet dolor voluptate reprehenderit ad laboris pariatur ex fugiat.",
+      "gallery_description": "Cillum laborum anim irure non anim.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 49,
+    "attributes": {
+      "event_title": "Sunset Serenade",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-07-29T03:25:04 +05:00",
+      "updatedAt": "2024-08-22T07:10:30 +05:00",
+      "publishedAt": "2024-07-09T06:03:05 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-04-01",
+      "artists_performing": "Ea consequat velit incididunt consectetur enim consequat fugiat fugiat culpa minim. Ullamco occaecat mollit ut sint duis duis dolore labore quis elit dolor.",
+      "event_schedule": "Ad magna velit est id labore dolor magna consectetur. Et anim est aliquip anim ullamco.",
+      "highlights": "Amet non quis Lorem voluptate anim in officia adipisicing laborum.",
+      "gallery_description": "Duis fugiat quis sint voluptate commodo non incididunt incididunt quis elit reprehenderit.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  },
+  {
+    "id": 50,
+    "attributes": {
+      "event_title": "Northern Lights",
+      "start": "8:00 PM",
+      "doors": "7:00 PM",
+      "createdAt": "2024-10-29T11:54:57 +05:00",
+      "updatedAt": "2024-11-11T02:41:06 +05:00",
+      "publishedAt": "2024-03-13T09:59:44 +05:00",
+      "venues": "Meany Center for the Performing Arts",
+      "venues_address": "4040 George Washington Lane Northeast, Seattle, WA 98195",
+      "date": "2024-11-06",
+      "artists_performing": "Cillum enim aliqua fugiat quis quis irure minim aliqua. Veniam culpa do tempor eu id laboris sunt commodo magna tempor aliquip.",
+      "event_schedule": "Magna ad aute in reprehenderit fugiat do quis esse dolore aliqua. In Lorem amet ea dolore nostrud laboris ut ut labore.",
+      "highlights": "Mollit aute cillum duis amet officia laborum cillum.",
+      "gallery_description": "Laboris est et elit commodo id amet eu reprehenderit enim pariatur cillum sint Lorem.",
+      "ticket_link": "#",
+      "image": {
+        "data": {
+          "id": 4,
+          "attributes": {
+            "url": "https://res.cloudinary.com/dzxvmmrxp/image/upload/v1727124122/Image_8a07ec7aff.png"
+          }
+        }
+      }
+    }
+  }
+]

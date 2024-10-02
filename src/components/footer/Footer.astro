@@ -1,0 +1,26 @@
+---
+import { GetInformation } from '../../api/ApiGetInformation';
+import SvgDegrade from '../../svg/footer/SvgDegrade.astro';
+import { mapImage } from '../../utils/general';
+
+const { data } = await GetInformation({ url: 'footer?populate[social_media][populate][logo][fields]=url' });
+const map_data = data?.data?.attributes?.social_media;
+---
+
+<footer class='bg-dark_blue pt-[100px] relative'>
+  <div class='w-full flex items-center justify-center gap-[30px] flex-wrap'>
+    {
+      map_data.map((social) => (
+        <a href={social?.link} target='black'>
+          <img class='w-[25px] h-[25px] object-contain cursor-pointer' src={mapImage(social?.logo)} alt='' />
+        </a>
+      ))
+    }
+  </div>
+
+  <div class='w-[100%] absolute bottom-0 pointer-events-none max-w-[400px] right-1/2 translate-x-1/2'>
+    <SvgDegrade />
+  </div>
+
+  <p class='text-[12px] font-roboto text-white uppercase text-center pt-[41px] pb-[31px]'>SAMA - All Rights <br /> Reserved</p>
+</footer>

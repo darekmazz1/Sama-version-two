@@ -1,0 +1,38 @@
+---
+import SvgArrow from '../../svg/news/SvgArrow';
+import CustomNavigation from './CustomNavigation.astro';
+import Head from './Head.astro';
+const { style, arrow = true, text, text_navigation } = Astro.props;
+---
+
+<section>
+  {
+    arrow && (
+      <div class='container_all'>
+        <a href='/'>
+          <div class='w-[50px] rotate-[180deg] translate-x-[-5px] md:hidden'>
+            <SvgArrow type={1} color={'white'} />
+          </div>
+        </a>
+      </div>
+    )
+  }
+  <div class='pt-[16px] md:pt-0 z-30'>
+    <Head text={text} style={style} />
+  </div>
+
+  {
+    arrow && (
+      <div class='md:flex container_all hidden py-[20px]'>
+        <a href='/'>
+          <div class='w-[35px] rotate-[180deg] translate-x-[-5px]'>
+            <SvgArrow type={1} color={null} />
+          </div>
+        </a>
+
+        <CustomNavigation text='Home' hrf='/' arrow={true} />
+        <CustomNavigation text={text_navigation} hrf='#' arrow={false} />
+      </div>
+    )
+  }
+</section>

@@ -1,0 +1,15 @@
+---
+import { GetInformation } from '../api/ApiGetInformation';
+import HeadArrowAndLetter from '../components/general/HeadArrowAndLetter.astro';
+import Layout from '../layouts/Layout.astro';
+import NewsPage from '../content/news/NewsPage.jsx';
+
+const { data } = await GetInformation({ url: 'news?populate[image][fields]=url&populate[user_photo][fields]=url' });
+---
+
+<Layout title='news'>
+  <main class='bg-dark_blue pt-[120px] md:pt-0'>
+    <HeadArrowAndLetter text='News' style='text-start' text_navigation="Community and news"/>
+    <NewsPage client:load data={data} />
+  </main>
+</Layout>

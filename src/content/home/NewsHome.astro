@@ -1,0 +1,20 @@
+---
+import Titles from '../../components/fonts/Titles.astro';
+import Button from '../../components/buttons/Button';
+import NewsSlide from '../../components/swiper/NewsSlide';
+
+const { data } = Astro.props;
+const map_data = data?.data?.attributes?.news?.data;
+---
+
+<section>
+  <div class='mb-[21px] pt-general md:pt-general_desktop'>
+    <Titles one='Upcoming' two='News' />
+  </div>
+  <NewsSlide client:idle data={map_data} />
+  <div class='mt-[64px] pb-[40px] flex justify-end'>
+    <a href='/news'>
+      <Button client:idle text='View all news' style={null} />
+    </a>
+  </div>
+</section>

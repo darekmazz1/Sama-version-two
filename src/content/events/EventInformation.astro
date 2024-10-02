@@ -1,0 +1,28 @@
+---
+import { parseText } from '../../utils/general';
+
+const { data } = Astro.props;
+const map_data = data?.data?.attributes;
+---
+
+<section class='text-white'>
+  <div class='container_all md:flex md:gap-[40px] md:pt-[48px]'>
+    {
+      map_data?.artists_performing && (
+        <div>
+          <h2 class='text-title_three font-bitter pt-[10px] md:pt-0'>Artists Performing</h2>
+          <p class='text-paragraph font-roboto mt-[32px] md:h-[260px] overflow-auto' set:html={parseText(map_data?.artists_performing)} />{' '}
+        </div>
+      )
+    }
+
+    {
+      map_data?.event_schedule && (
+        <div>
+          <h2 class='text-title_three font-bitter mt-[40px] md:mt-0'>Event Schedule</h2>
+          <p class='text-paragraph font-roboto mt-[32px] md:h-[260px] overflow-auto' set:html={parseText(map_data?.event_schedule)} />
+        </div>
+      )
+    }
+  </div>
+</section>

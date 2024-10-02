@@ -1,0 +1,11 @@
+---
+import SvgArrow from '../../svg/news/SvgArrow';
+const { arrow, text, hrf } = Astro.props;
+---
+
+<div class='md:flex md:items-center md:gap-[4px] text-white'>
+  <a class={`${!arrow && 'font-bold'}`} href={hrf}>{text}</a>
+  <div class='w-[25px] translate-y-[2px]'>
+    {arrow && <SvgArrow type={2} color={'white'} />}
+  </div>
+</div>

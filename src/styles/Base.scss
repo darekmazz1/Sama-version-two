@@ -1,0 +1,68 @@
+@import './swiper.scss';
+
+* {
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.container_all {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+.container_all_mobil {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1400px;
+  @media (min-width: 768px) {
+    width: 100%;
+  }
+}
+
+.container_all_desktop {
+  @media (min-width: 768px) {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1400px;
+  }
+}
+
+.border {
+  border: 1px white solid;
+}
+
+.border_purple {
+  border: 1px #914297 solid;
+}
+
+.border_my {
+  border: 1px white solid;
+
+  @media (min-width: 768px) {
+    border-right: unset;
+    border-left: unset;
+    border-top: unset;
+    border-bottom: 1 white solid;
+  }
+}
+
+.border_t {
+  border-top: 1px white solid;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/* Fondo de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+  background-color: #0c052f; /* Color del fondo de la barra */
+}
+
+/* Color de la parte desplazable */
+::-webkit-scrollbar-thumb {
+  background-color: white; /* Color de la barra cuando se desplaza */
+}
