@@ -19,8 +19,8 @@ jobs:
         uses: radenpioneer/astro-ftp-deploy@v0.1.0
         with:
           server: ftp.samamusicarts.org
-         username: calendar@test.samamusicarts.com
+          username: calendar@test.samamusicarts.com
           password: ${{ secrets.FTP_PASSWORD }}
           directory: '/'
-          protocol: 21  
-          timeout: 60000  
+          protocol: ftp
+          timeout: 120000
