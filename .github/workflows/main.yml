@@ -3,7 +3,7 @@ on:
     branches: [main]
   repository_dispatch:
     types: [strapi-update]
-  workflow_dispatch: 
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -22,5 +22,3 @@ jobs:
           username: calendar@samamusicarts.org
           password: ${{ secrets.FTP_PASSWORD }}
           directory: '/'
-          protocol: ftp
-          timeout: 120000
