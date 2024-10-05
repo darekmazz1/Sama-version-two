@@ -2,8 +2,8 @@ on:
   push:
     branches: [main]
   repository_dispatch:
-    types: [strapi-update] # Este es el evento que dispara la acción
-  workflow_dispatch: # Permite que el despliegue sea manual si es necesario
+    types: [strapi-update]
+  workflow_dispatch: 
 
 permissions:
   contents: read

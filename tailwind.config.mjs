@@ -18,6 +18,8 @@ export default {
         light_purple: '#3D3959',
         blue: '#009FE3',
         pink: '#B1A1FF',
+        gray: '#AAAAAA',
+        yellow: '#FFEE00',
       },
 
       padding: {
