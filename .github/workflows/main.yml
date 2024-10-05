@@ -18,9 +18,9 @@ jobs:
       - name: Install, build, and upload your site output
         uses: radenpioneer/astro-ftp-deploy@v0.1.0
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
+          server: ftp.samamusicarts.org
+         username: calendar@test.samamusicarts.com
           password: ${{ secrets.FTP_PASSWORD }}
           directory: '/'
-          protocol: ftp
-          timeout: 60000
+          protocol: 21  
+          timeout: 60000  
