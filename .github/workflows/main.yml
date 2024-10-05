@@ -19,7 +19,7 @@ jobs:
         uses: radenpioneer/astro-ftp-deploy@v0.1.0
         with:
           server: ftp.samamusicarts.org
-          username: calendar@test.samamusicarts.com
+          username: calendar@samamusicarts.org
           password: ${{ secrets.FTP_PASSWORD }}
           directory: '/'
           protocol: ftp
