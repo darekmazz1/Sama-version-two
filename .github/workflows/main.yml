@@ -24,6 +24,4 @@ jobs:
           username: calendar@test.samamusicarts.com
           password: ${{ secrets.FTP_PASSWORD }}
           directory: '/'
-          protocol: ftps
-          port: 21
-          timeout: 120000
+
