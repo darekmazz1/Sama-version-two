@@ -22,3 +22,5 @@ jobs:
           username: calendar@samamusicarts.org
           password: ${{ secrets.FTP_PASSWORD }}
           directory: '/'
+          protocol: sftp 
+          port: 22  
