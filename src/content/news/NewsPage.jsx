@@ -70,10 +70,10 @@ const ArrowPagination = ({ style, onClick, text, responsive }) => {
       onClick={onClick}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className='w-[44px] h-[44px]  md:w-[150px] md:h-auto md:py-[8px] md:px-[20px] md:gap-[12px] hover:bg-white  hover:text-black cursor-pointer md:bg-purple flex justify-center items-center rounded-[8px] border'
+      className='w-[44px] h-[44px]  md:w-[150px] md:h-auto md:py-[8px] md:px-[20px] md:gap-[12px] text-black hover:bg-purple  hover:text-white cursor-pointer md:bg-white flex justify-center items-center rounded-[8px] border'
     >
       <div className={`w-[24px] md:w-[30px] md:translate-y-[-1px] ${style}`}>
-        <SvgArrow type={2} color={isHovered ? 'black' : 'white'} />
+        <SvgArrow type={2} color={!isHovered ? 'black' : 'white'} />
       </div>
 
       {responsive >= 768 && <p className='text-[16px] font-roboto'>{text}</p>}

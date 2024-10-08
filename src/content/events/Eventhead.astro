@@ -4,7 +4,7 @@ import CustomNavigation from '../../components/general/CustomNavigation.astro';
 import SvgClock from '../../svg/eventCard/SvgClock';
 import SvgMapAim from '../../svg/eventCard/SvgMapAim';
 import SvgArrow from '../../svg/news/SvgArrow';
-import SvgShare from '../../svg/SvgShare';
+import Mediator from '../../components/buttons/Mediator';
 import { getDate, getDay, mapImage } from '../../utils/general';
 
 const { data } = Astro.props;
@@ -18,9 +18,11 @@ const map_data = data?.data?.attributes;
         <SvgArrow type={1} color={null} />
       </div>
 
-      <CustomNavigation text='Home' hrf='/' arrow={true} />
-      <CustomNavigation text='Calendar' hrf='/calendar' arrow={true} />
-      <CustomNavigation text={map_data?.event_title} hrf='#' arrow={false} />
+      <div class='hidden md:flex'>
+        <CustomNavigation text='Home' hrf='/' arrow={true} />
+        <CustomNavigation text='Calendar' hrf='/calendar' arrow={true} />
+        <CustomNavigation text={map_data?.event_title} hrf='#' arrow={false} />
+      </div>
     </div>
   </div>
   <div class='relative text-white mt-[16px]'>
@@ -66,10 +68,8 @@ const map_data = data?.data?.attributes;
         </div>
 
         <div class='flex justify-between items-center mt-[16px] md:mt-[40px] md:justify-start md:gap-[40px]'>
-          <Button text='Get Tickets' style={'bg-purple'} />
-          <div class='w-[50px]'>
-            <SvgShare hover={false} />
-          </div>
+          <Button text='Get Tickets' style={''} onClick={null} />
+          <Mediator client:idle />
         </div>
       </div>
     </div>

@@ -20,6 +20,7 @@ export default {
         pink: '#B1A1FF',
         gray: '#AAAAAA',
         yellow: '#FFEE00',
+        light_blue: '#009FE3',
       },
 
       padding: {

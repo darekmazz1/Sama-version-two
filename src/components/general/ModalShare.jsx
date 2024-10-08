@@ -64,11 +64,11 @@ const ModalShare = () => {
           <p className='text-[32px] font-bitter text-center font-[500] mb-[24px]'>Share</p>
 
           <div className=' flex gap-[12px] flex-col '>
-            <ShareComponent img={'assets/social/Google.svg'} name={'Google'} click={shareViaMail} />
-            <ShareComponent img={'assets/social/Facebook.svg'} name={'Facebook'} click={shareViaFacebook} />
-            <ShareComponent img={'assets/social/Instagram.svg'} name={'Instagram'} click={shareViaInstagram} />
-            <ShareComponent img={'assets/social/Wa.svg'} name={'WhatsApp'} click={shareViaWhatsApp} />
-            <ShareComponent img={'assets/social/X.svg'} name={'X/Titter'} click={shareViaX} />
+            <ShareComponent img={'/assets/social/Google.svg'} name={'Google'} click={shareViaMail} />
+            <ShareComponent img={'/assets/social/Facebook.svg'} name={'Facebook'} click={shareViaFacebook} />
+            <ShareComponent img={'/assets/social/Instagram.svg'} name={'Instagram'} click={shareViaInstagram} />
+            <ShareComponent img={'/assets/social/Wa.svg'} name={'WhatsApp'} click={shareViaWhatsApp} />
+            <ShareComponent img={'/assets/social/X.svg'} name={'X/Titter'} click={shareViaX} />
           </div>
         </div>
       </div>

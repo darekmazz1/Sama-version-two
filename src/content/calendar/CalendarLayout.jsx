@@ -135,8 +135,8 @@ const CalendarLayout = ({ data }) => {
             }}
             className={`month-button cursor-pointer transition-all duration-500 h-[60px] ${
               selectedMonth?.toLowerCase() === month?.toLowerCase()
-                ? 'text-white text-[46px] font-playfair translate-y-[-12px] '
-                : 'text-blue text-[32px] font-bitter'
+                ? 'text-white text-[46px] font-playfair translate-y-[-12px] font-[700] '
+                : 'text-blue text-[32px] font-bitter '
             }`}
           >
             {month}

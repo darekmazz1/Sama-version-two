@@ -4,6 +4,7 @@ const SvgShare = () => {
   const [hoverShare, setHoverShare] = useState(false);
   return (
     <svg
+      className='cursor-pointer'
       onMouseEnter={() => setHoverShare(true)}
       onMouseLeave={() => setHoverShare(false)}
       xmlns='http://www.w3.org/2000/svg'
