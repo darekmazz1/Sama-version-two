@@ -4,7 +4,6 @@ import SvgMapAim from '../../svg/eventCard/SvgMapAim';
 import Button from '../buttons/Button';
 import SvgShare from '../../svg/SvgShare';
 import useStoreModalShare from '../../store/useStoreModalShare';
-import { useState } from 'react';
 
 const EventCard = ({ data }) => {
   const map_data = data?.attributes;
@@ -54,7 +53,14 @@ const EventCard = ({ data }) => {
           <a href={`/event/1`}>
             <Button text='More info' />
           </a>
-          <div onClick={toggleState} className='w-[40px] cursor-pointer'>
+          <div
+            onClick={() => {
+              toggleState();
+              setTitle(map_data?.event_title);
+              setDescription(map_data?.artists_performing);
+            }}
+            className='w-[40px] cursor-pointer'
+          >
             <SvgShare />
           </div>
         </div>
