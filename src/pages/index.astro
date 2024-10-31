@@ -6,15 +6,15 @@ import { GetInformation } from '../api/ApiGetInformation';
 import LeadsHome from '../content/home/LeadsHome.astro';
 import NewsHome from '../content/home/NewsHome.astro';
 
-import events_data from '../json/Events.json';
+// import events_data from '../json/Events.json';
 import { getUpcomingEvents } from '../utils/general';
 
-// const { data: events_data } = await GetInformation({ url: 'events?populate[image][fields]=url' });
+const { data: events_data } = await GetInformation({ url: 'events?populate[image][fields]=url' });
 const { data: home_data } = await GetInformation({
   url: 'home?populate[news][populate][image][fields]=url&populate[news][populate][user_photo][fields]=url',
 });
 
-const upcomingEvents = getUpcomingEvents(events_data);
+const upcomingEvents = getUpcomingEvents(events_data?.data);
 ---
 
 <Layout title='Welcome to Astro.'>

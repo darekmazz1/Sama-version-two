@@ -27,7 +27,9 @@ const NewsCard = ({ data }) => {
             </div>
           </div>
 
-          <ButtonTwo text='View more' />
+          <a href={map_data?.link} target='black'>
+            <ButtonTwo text='View more' />
+          </a>
         </div>
       </div>
     </div>

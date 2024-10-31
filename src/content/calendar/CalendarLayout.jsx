@@ -11,15 +11,21 @@ const CalendarLayout = ({ data }) => {
 
   const [selectedMonth, setSelectedMonth] = useState(null);
   const [selectedDay, setSelectedDay] = useState(null);
+  const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
   const [cardView, setCardView] = useState(true);
   const [activeScroll, setActiveScroll] = useState(true);
 
+  const [calendarData, setCalendarData] = useState([]);
+
   const eventsByMonth = groupEventsByMonth(data);
   const monthsContainerRef = useRef(null);
-
   const numbers = getDaysEvents();
 
-  console.log(selectedMonth);
+  useEffect(() => {
+    if (eventsByMonth) {
+      setCalendarData(eventsByMonth[selectedYear]);
+    }
+  }, [selectedYear]);
 
   useEffect(() => {
     if (selectedMonth && monthsContainerRef.current) {
@@ -118,8 +124,26 @@ const CalendarLayout = ({ data }) => {
 
   return (
     <div className='text-white container_all'>
-      <div ref={monthsContainerRef} className={`flex gap-[20px] overflow-auto sticky top-[120px] mt-[40px] left-0 z-30 md:top-0  bg-dark_blue`}>
-        {Object.keys(eventsByMonth).map((month) => (
+      <div className='flex gap-[20px] items-center justify-center overflow-auto'>
+        {Object.keys(eventsByMonth).map((year) => (
+          <div key={year}>
+            <p
+              onClick={() => setSelectedYear(year)}
+              className={` cursor-pointer text-[46px] font-playfair mt-[40px] text-center ${
+                String(year) === String(selectedYear) ? 'text-white' : 'text-blue'
+              }`}
+            >
+              {year}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      <div
+        ref={monthsContainerRef}
+        className={`flex gap-[20px] overflow-x-auto sticky top-[120px] mt-[10px] left-0 z-30 md:top-[0px] md:pt-[20px] pb-[10px]  bg-dark_blue`}
+      >
+        {Object.keys(calendarData).map((month) => (
           <Link
             key={month}
             to={month}
@@ -135,7 +159,7 @@ const CalendarLayout = ({ data }) => {
             }}
             className={`month-button cursor-pointer transition-all duration-500 h-[60px] ${
               selectedMonth?.toLowerCase() === month?.toLowerCase()
-                ? 'text-white text-[46px] font-playfair translate-y-[-12px] font-[700] '
+                ? 'text-white text-[46px] font-playfair translate-y-[-12px] font-[700] underline '
                 : 'text-blue text-[32px] font-bitter '
             }`}
           >
@@ -144,13 +168,13 @@ const CalendarLayout = ({ data }) => {
         ))}
       </div>
 
-      <div className='flex gap-[26px] overflow-auto items-center sticky top-[180px] md:top-[65px] left-0 z-30 bg-dark_blue'>
+      <div className='flex gap-[26px] overflow-auto items-center sticky top-[188px] pt-[20px] md:pt-[30px]   md:top-[88px] left-0 z-30 bg-dark_blue'>
         {numbers.map((num) => (
           <p
             key={num}
             onClick={() => handleDayClick(num)}
             className={`cursor-pointer transition-all duration-500  h-[60px] ${
-              selectedDay === num ? 'text-white font-playfair text-[48px] translate-y-[-20px]' : 'text-blue text-[32px] font-bitter'
+              selectedDay === num ? 'text-white font-playfair text-[48px] translate-y-[-20px] underline' : 'text-blue text-[32px] font-bitter'
             } `}
           >
             {num}
@@ -163,9 +187,9 @@ const CalendarLayout = ({ data }) => {
       </div>
 
       <div className='grid gap-[40px] mt-[40px]'>
-        {Object.keys(eventsByMonth).map((month) => (
+        {Object.keys(calendarData || {}).map((month) => (
           <Element name={month} key={month} className={`grid ${cardView ? ' md:grid-cols-2 lg:grid-cols-3 gap-[40px] ' : ' gap-[40px] md:gap-0'}`}>
-            {eventsByMonth[month].map((event, idx) => (
+            {(calendarData[month] || []).map((event, idx) => (
               <Element key={event.id} name={`event-${event.id}`}>
                 {cardView ? <EventCard data={event} /> : <EventCardTwo data={event} idx={idx} />}
               </Element>

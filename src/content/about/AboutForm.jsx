@@ -43,7 +43,7 @@ const AboutForm = ({ data }) => {
 
     try {
       const response = await fetch(
-        'https://script.google.com/macros/s/AKfycbxUo76L3XaU5hcz9NG_OAEtIiDzjQ1tksI2XBC-YjFHJ7vfa_ylXLyBWy84c7KSAnIX/exec',
+        'https://script.google.com/macros/s/AKfycbxouW7YSYV7A2YOkqc8cm1yBCNM6jIw2j_vbPFKxasqOOM5ZmP2a5EU48I53MDjKMkB/exec',
         {
           method: 'POST',
           body: JSON.stringify({
@@ -51,20 +51,16 @@ const AboutForm = ({ data }) => {
             email: formData.email,
             message: formData.message,
           }),
-          mode: 'no-cors',
+          // mode: 'no-cors',
           headers: {
             'Content-Type': 'application/json',
           },
         }
       );
 
-      console.log(response)
-
       if (!response.ok) {
         throw new Error('Error en el envío del formulario');
       }
-
-      console.log(response);
 
       setSendedData('Submitted');
     } catch (error) {
@@ -76,8 +72,11 @@ const AboutForm = ({ data }) => {
   return (
     <section>
       <div className='container_all text-white py-[40px] md:py-[112px]'>
-        <h2 className='text-[36px] font-bitter text-center font-[700]  '>Contact us</h2>
-        <p className='mt-[16px] text-center text-paragraph font-roboto' dangerouslySetInnerHTML={{ __html: parseText(map_data?.form_description) }} />
+        <h2 className='text-[36px] font-bitter text-center font-[700]'>Contact us</h2>
+        <p
+          className='mt-[16px] md:text-center text-paragraph font-roboto'
+          dangerouslySetInnerHTML={{ __html: parseText(map_data?.form_description) }}
+        />
 
         <form className='flex flex-col gap-[24px] mt-[48px]' onSubmit={handleSubmit}>
           <InputField label={'Name'} type={'text'} name={'name'} onChange={handleInformation} guide={'John Doe'} />
@@ -93,7 +92,7 @@ const AboutForm = ({ data }) => {
           </div>
 
           <div className={`inline-block m-auto cursor-pointer ${!activeButton && 'pointer-events-none'}`}>
-            <Button type='submit' text={sendedData} style={`${activeButton ? 'bg-purple border_purple' : 'bg-gray border_gray'}`} />
+            <Button type='submit' text={sendedData} type_button={1} style={`${activeButton ? 'bg-purple border_purple' : 'bg-gray border_gray'}`} />
           </div>
         </form>
       </div>

@@ -55,7 +55,7 @@ const ModalShare = () => {
         </div>
       </div>
 
-      <div className='bg-black absolute top-0 left-0 w-full h-[100dvh] opacity-20'></div>
+      <div onClick={toggleState} className='bg-black absolute top-0 left-0 w-full h-[100dvh] opacity-[80%]'></div>
     </div>
   );
 };

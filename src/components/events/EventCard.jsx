@@ -50,7 +50,7 @@ const EventCard = ({ data }) => {
         </div>
 
         <div className='flex justify-between items-center mt-[16px]'>
-          <a href={`/event/1`}>
+          <a href={`/event/${data?.id}`}>
             <Button text='More info' />
           </a>
           <div

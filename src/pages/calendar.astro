@@ -2,14 +2,15 @@
 import Layout from '../layouts/Layout.astro';
 import HeadArrowAndLetter from '../components/general/HeadArrowAndLetter.astro';
 import CalendarLayout from '../content/calendar/CalendarLayout';
-import data from '../json/Events.json';
+import { GetInformation } from '../api/ApiGetInformation';
+// import data from '../json/Events.json';
 
-// const { data } = await GetInformation({ url: 'events?populate[image][fields]=url' });
+const { data } = await GetInformation({ url: 'events?populate[image][fields]=url' });
 ---
 
 <Layout title='calendar'>
   <main class='bg-dark_blue pt-[120px] md:pt-0'>
     <HeadArrowAndLetter text='Event Calendar' arrow={false} />
-    <CalendarLayout client:load data={data} />
+    <CalendarLayout client:load data={data?.data} />
   </main>
 </Layout>

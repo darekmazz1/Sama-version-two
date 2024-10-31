@@ -11,7 +11,7 @@ const { data } = await GetInformation({ url: 'about?populate[image][fields]=url'
 
 <Layout title='about'>
   <main class='bg-dark_blue pt-[120px] md:pt-0'>
-    <HeadArrowAndLetter text='About us' text_navigation="About us"/>
+    <HeadArrowAndLetter text='About us' text_navigation='About us' />
     <AboutHead data={data} />
 
     <div class='max-w-[768px] m-auto'>

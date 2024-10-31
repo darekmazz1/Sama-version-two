@@ -16,6 +16,7 @@ export default {
         white: '#FFFFFF',
         purple: '#914297',
         light_purple: '#3D3959',
+        light_pruple_hover: '#c166c8',
         blue: '#009FE3',
         pink: '#B1A1FF',
         gray: '#AAAAAA',
