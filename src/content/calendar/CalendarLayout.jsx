@@ -21,6 +21,8 @@ const CalendarLayout = ({ data }) => {
   const monthsContainerRef = useRef(null);
   const numbers = getDaysEvents();
 
+  const allMonths = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
   useEffect(() => {
     if (eventsByMonth) {
       setCalendarData(eventsByMonth[selectedYear]);
@@ -141,9 +143,9 @@ const CalendarLayout = ({ data }) => {
 
       <div
         ref={monthsContainerRef}
-        className={`flex gap-[20px] overflow-x-auto sticky top-[120px] mt-[10px] left-0 z-30 md:top-[0px] md:pt-[20px] pb-[10px]  bg-dark_blue`}
+        className={`flex gap-[20px] overflow-x-auto sticky top-[120px] mt-[10px] left-0 z-30 md:top-[0px] md:pt-[20px] pb-[0px]  bg-dark_blue`}
       >
-        {Object.keys(calendarData).map((month) => (
+        {allMonths.map((month) => (
           <Link
             key={month}
             to={month}
