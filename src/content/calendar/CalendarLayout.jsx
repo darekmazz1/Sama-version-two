@@ -95,7 +95,7 @@ const CalendarLayout = ({ data }) => {
   const handleDayClick = (num) => {
     setSelectedDay(num);
 
-    const eventsInMonth = eventsByMonth[selectedMonth];
+    const eventsInMonth = calendarData[selectedMonth];
 
     if (eventsInMonth) {
       const eventForDay = eventsInMonth.find((event) => {
@@ -161,8 +161,10 @@ const CalendarLayout = ({ data }) => {
             }}
             className={`month-button cursor-pointer transition-all duration-500 h-[60px] ${
               selectedMonth?.toLowerCase() === month?.toLowerCase()
-                ? 'text-white text-[46px] font-playfair translate-y-[-12px] font-[700] underline '
-                : 'text-blue text-[32px] font-bitter '
+                ? 'text-white text-[46px] font-playfair translate-y-[-12px] font-[700] underline'
+                : Object.keys(calendarData).includes(month) && calendarData[month].length > 0
+                ? 'text-blue text-[32px] font-bitter'
+                : 'text-gray text-[32px] font-bitter pointer-events-none'
             }`}
           >
             {month}
@@ -171,17 +173,25 @@ const CalendarLayout = ({ data }) => {
       </div>
 
       <div className='flex gap-[26px] overflow-auto items-center sticky top-[188px] pt-[20px] md:pt-[30px]   md:top-[88px] left-0 z-30 bg-dark_blue'>
-        {numbers.map((num) => (
-          <p
-            key={num}
-            onClick={() => handleDayClick(num)}
-            className={`cursor-pointer transition-all duration-500  h-[60px] ${
-              selectedDay === num ? 'text-white font-playfair text-[48px] translate-y-[-20px] underline' : 'text-blue text-[32px] font-bitter'
-            } `}
-          >
-            {num}
-          </p>
-        ))}
+        {numbers.map((num) => {
+          const eventsInMonth = calendarData[selectedMonth] || [];
+          const hasEvent = eventsInMonth.some((event) => new Date(event.attributes.date).getDate() === num);
+          return (
+            <p
+              key={num}
+              onClick={() => handleDayClick(num)}
+              className={`cursor-pointer transition-all duration-500  h-[60px] ${
+                selectedDay === num
+                  ? 'text-white font-playfair text-[48px] translate-y-[-20px] underline'
+                  : hasEvent
+                  ? 'text-blue text-[32px] font-bitter'
+                  : 'text-gray text-[32px] font-bitter pointer-events-none'
+              } `}
+            >
+              {num}
+            </p>
+          );
+        })}
       </div>
 
       <div onClick={() => setCardView(!cardView)} className='w-[50px] ml-auto mt-[40px] cursor-pointer'>
