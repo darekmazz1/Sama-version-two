@@ -7,12 +7,12 @@ const NewsPage = ({ data }) => {
   const responsive = useWindowWidth();
 
   const map_data = data?.data;
-  const duplicateData = [...map_data, ...map_data];
+
 
   const itemsPerPage = 6;
   const [page, setPage] = useState(1);
-  const totalPages = Math.ceil(duplicateData.length / itemsPerPage);
-  const paginatedData = duplicateData.slice((page - 1) * itemsPerPage, page * itemsPerPage);
+  const totalPages = Math.ceil(map_data.length / itemsPerPage);
+  const paginatedData = map_data.slice((page - 1) * itemsPerPage, page * itemsPerPage);
 
   const buttonRefs = useRef([]);
 
