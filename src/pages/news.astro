@@ -8,7 +8,7 @@ const { data } = await GetInformation({ url: 'news?populate[image][fields]=url&p
 ---
 
 <Layout title='news'>
-  <main class='bg-dark_blue pt-[120px] md:pt-0'>
+  <main class='bg-dark_blue pt-[120px] md:pt-0 min-h-[100dvh]'>
     <HeadArrowAndLetter text='News' style='text-start' text_navigation="Community and news"/>
     <NewsPage client:load data={data} />
   </main>

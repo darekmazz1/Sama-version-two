@@ -34,10 +34,12 @@ const NewsPage = ({ data }) => {
 
   return (
     <section className='text-white container_all min-h-full'>
-      <div className='grid gap-[16px] mt-[40px] md:mt-[20px] md:grid-cols-2 lg:grid-cols-3 md:gap-[40px]'>
-        {paginatedData.map((data, index) => (
-          <NewsCard key={index} data={data} />
-        ))}
+      <div className='md:h-[1000px]'>
+        <div className='grid gap-[16px] mt-[40px] md:mt-[20px] md:grid-cols-2 lg:grid-cols-3 md:gap-[40px] '>
+          {paginatedData.map((data, index) => (
+            <NewsCard key={index} data={data} />
+          ))}
+        </div>
       </div>
 
       <div className='flex items-center justify-between mt-[56px]'>
