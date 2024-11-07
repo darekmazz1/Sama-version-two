@@ -19,14 +19,14 @@ const upcomingEvents = getUpcomingEvents(events_data?.data);
 
 <Layout title='Welcome to Astro.'>
   <main class='bg-dark_blue pt-[136px] md:pt-0 text-white'>
-    <div class='bg-cover bg-no-repeat bg-center relative' style={{ backgroundImage: 'url(/assets/bg_home.png)' }}>
-      <div class='container_all relative z-10'>
+    <div class='bg-cover bg-no-repeat relative' style={{ backgroundImage: 'url(/assets/bg_home_mobile.png)' }}>
+      <div class='container_all relative z-10 pb-general md:pb-general_desktop'>
         <HeaderHome data={home_data} />
         <EventsSliderHome data={upcomingEvents} />
         <LeadsHome data={home_data} />
       </div>
 
-      <div class='absolute top-0 left-0 md:hidden bg-dark_blue w-full h-full opacity-75 z-0'></div>
+      <!-- <div class='absolute top-0 left-0 md:hidden bg-dark_blue w-full h-full opacity-75 z-0'></div> -->
     </div>
     <div class='container_all'>
       <NewsHome data={home_data} />
