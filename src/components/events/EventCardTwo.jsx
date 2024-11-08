@@ -39,7 +39,7 @@ const EventCardTwo = ({ data, idx }) => {
         </div>
 
         <div className='flex justify-between items-center mt-[16px]  md:flex-col md:gap-[30px]'>
-          <a className='order-1' href={`/event/1`}>
+          <a className='order-1' href={`/event/${data?.id}`}>
             <Button text='More info' />
           </a>
           <div onClick={toggleState} className='w-[35px] cursor-pointer'>
