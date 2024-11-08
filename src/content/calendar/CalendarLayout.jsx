@@ -198,7 +198,7 @@ const CalendarLayout = ({ data }) => {
         <SvgView type={cardView ? 1 : 2} />
       </div>
 
-      <div className='grid gap-[40px] mt-[40px]'>
+      <div className={`grid  mt-[40px] ${cardView ? "gap-[40px]" : ""}`}>
         {Object.keys(calendarData || {}).map((month) => (
           <Element name={month} key={month} className={`grid ${cardView ? ' md:grid-cols-2 lg:grid-cols-3 gap-[40px] ' : ' gap-[40px] md:gap-0'}`}>
             {(calendarData[month] || []).map((event, idx) => (

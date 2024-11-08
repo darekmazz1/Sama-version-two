@@ -11,8 +11,8 @@ const EventCardTwo = ({ data, idx }) => {
 
   return (
     <div className='border_my bg-dark_blue relative  p-[16px] md:p-0'>
-      {idx === 0 && <div className='border_t mb-[24px] hidden md:block'></div>}
-
+      {idx === 0 && <div className='border_t  hidden md:block'></div>}
+      {/* mb-[24px] */}
       <div className='md:flex md:justify-between md:items-center'>
         <div className='flex items-start md:items-center gap-[10px]'>
           <div className='bg-white md:absolute top-[30px] md:left-[20px] text-black py-[8px] px-[10px] font-[700] rounded-[6px] opacity-80 font-inter flex justify-center items-center flex-col'>
