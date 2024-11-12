@@ -14,7 +14,7 @@ const AboutForm = ({ data }) => {
     name: '',
     email: '',
     message: '',
-    // accept: false,
+    accept: false,
   });
 
   const handleInformation = (e) => {
@@ -42,27 +42,30 @@ const AboutForm = ({ data }) => {
     if (!activeButton) return;
 
     try {
-      const response = await fetch(
-        'https://script.google.com/macros/s/AKfycbxouW7YSYV7A2YOkqc8cm1yBCNM6jIw2j_vbPFKxasqOOM5ZmP2a5EU48I53MDjKMkB/exec',
-        {
-          method: 'POST',
-          body: JSON.stringify({
-            name: formData.name,
-            email: formData.email,
-            message: formData.message,
-          }),
-          // mode: 'no-cors',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        }
-      );
+      setActiveButton(false);
 
-      if (!response.ok) {
-        throw new Error('Error en el envío del formulario');
-      }
+      await fetch('https://script.google.com/macros/s/AKfycbwziGVX9Fy31Du3--sBMb8S9K32TPfDSgnCmJvOxaAA7RjjP-ZOi7lSRSYSNuw6ArM-/exec', {
+        method: 'POST',
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          subscribe: formData.accept ? 'Yes, add me to the email list' : 'No, do not add me to the email list',
+        }),
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
 
       setSendedData('Submitted');
+
+      setFormData({ name: '', email: '', message: '', accept: false });
+
+      setTimeout(() => {
+        setActiveButton(true);
+        setSendedData('Submit');
+      }, 2000);
     } catch (error) {
       setSendedData('Error');
       console.error(error);
@@ -73,21 +76,15 @@ const AboutForm = ({ data }) => {
     <section>
       <div className='container_all text-white py-[40px] md:py-[112px]'>
         <h2 className='text-[36px] font-bitter text-center font-[700]'>Contact us</h2>
-        <p
-          className='mt-[16px] md:text-center text-paragraph font-roboto'
-          dangerouslySetInnerHTML={{ __html: parseText(map_data?.form_description) }}
-        />
+        <p className='mt-[16px] md:text-center text-paragraph font-roboto' dangerouslySetInnerHTML={{ __html: parseText(map_data?.form_description) }} />
 
         <form className='flex flex-col gap-[24px] mt-[48px]' onSubmit={handleSubmit}>
-          <InputField label={'Name'} type={'text'} name={'name'} onChange={handleInformation} guide={'John Doe'} />
-          <InputField label={'Email'} type={'email'} name={'email'} onChange={handleInformation} guide={'darek@samamusicarts.com'} />
-          <InputField label={'Message'} type={'text'} area={true} name={'message'} onChange={handleInformation} />
+          <InputField label={'Name'} type={'text'} name={'name'} onChange={handleInformation} guide={'John Doe'} value={formData.name} />
+          <InputField label={'Email'} type={'email'} name={'email'} onChange={handleInformation} guide={'darek@samamusicarts.com'} value={formData.email} />
+          <InputField label={'Message'} type={'text'} area={true} name={'message'} onChange={handleInformation} value={formData.message} />
 
           <div className='flex items-center gap-[8px]'>
-            <div
-              onClick={() => setFormData((prevdata) => ({ ...prevdata, accept: !formData.accept }))}
-              className={`w-[20px] h-[20px] rounded-[2pxs] cursor-pointer  ${formData.accept ? 'bg-purple' : 'bg-white'}`}
-            ></div>
+            <div onClick={() => setFormData((prevdata) => ({ ...prevdata, accept: !formData.accept }))} className={`w-[20px] h-[20px] rounded-[2pxs] cursor-pointer  ${formData.accept ? 'bg-purple' : 'bg-white'}`}></div>
             <p>Please add me to your mailing list!</p>
           </div>
 
@@ -100,7 +97,7 @@ const AboutForm = ({ data }) => {
   );
 };
 
-const InputField = ({ label, type, area = false, name, onChange, guide }) => {
+const InputField = ({ label, type, area = false, name, onChange, guide, value }) => {
   const [isFocused, setIsFocused] = useState(false);
   const styles = `block p-[12px] w-full mt-[8px] text-black input_focus`;
 
@@ -109,27 +106,12 @@ const InputField = ({ label, type, area = false, name, onChange, guide }) => {
       {label}
 
       {!area ? (
-        <input name={name} className={styles} type={type} onChange={onChange} onFocus={() => setIsFocused(true)} onBlur={() => setIsFocused(false)} />
+        <input name={name} value={value} className={styles} type={type} onChange={onChange} onFocus={() => setIsFocused(true)} onBlur={() => setIsFocused(false)} />
       ) : (
-        <textarea
-          className={styles}
-          name={name}
-          rows={6}
-          onChange={onChange}
-          placeholder='Type your message...'
-          type={type}
-          onFocus={() => setIsFocused(true)}
-          onBlur={() => setIsFocused(false)}
-        ></textarea>
+        <textarea value={value} className={styles} name={name} rows={6} onChange={onChange} placeholder='Type your message...' type={type} onFocus={() => setIsFocused(true)} onBlur={() => setIsFocused(false)}></textarea>
       )}
 
-      <p
-        className={`text-yellow transition-all duration-500 absolute bottom-[-25px] font-roboto text-[16px] opa ${
-          isFocused && !area ? 'opacity-90' : 'opacity-0 pointer-events-none'
-        }`}
-      >
-        {guide}
-      </p>
+      <p className={`text-yellow transition-all duration-500 absolute bottom-[-25px] font-roboto text-[16px] opa ${isFocused && !area ? 'opacity-90' : 'opacity-0 pointer-events-none'}`}>{guide}</p>
     </label>
   );
 };
