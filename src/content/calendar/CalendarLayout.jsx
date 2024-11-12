@@ -83,12 +83,14 @@ const CalendarLayout = ({ data }) => {
       setSelectedMonth(monthName);
       setSelectedDay(eventDate.getDate());
 
-      scroller.scrollTo(`event-${closestEvent.id}`, {
-        duration: 800,
-        delay: 0,
-        smooth: '',
-        offset: -250,
-      });
+      setTimeout(() => {
+        scroller.scrollTo(`event-${closestEvent.id}`, {
+          duration: 800,
+          delay: 0,
+          smooth: 'easeInOutQuart',
+          offset: -250,
+        });
+      }, 100);
     }
   }, []);
 
@@ -124,34 +126,28 @@ const CalendarLayout = ({ data }) => {
     }
   };
 
+  console.log(calendarData);
+
   return (
     <div className='text-white container_all'>
       <div className='flex gap-[20px] items-center justify-center overflow-auto'>
         {Object.keys(eventsByMonth).map((year) => (
           <div key={year}>
-            <p
-              onClick={() => setSelectedYear(year)}
-              className={` cursor-pointer text-[46px] font-playfair mt-[40px] text-center ${
-                String(year) === String(selectedYear) ? 'text-white' : 'text-blue'
-              }`}
-            >
+            <p onClick={() => setSelectedYear(year)} className={` cursor-pointer text-[46px] font-playfair mt-[40px] text-center ${String(year) === String(selectedYear) ? 'text-white' : 'text-blue'}`}>
               {year}
             </p>
           </div>
         ))}
       </div>
 
-      <div
-        ref={monthsContainerRef}
-        className={`flex gap-[20px] overflow-x-auto sticky top-[120px] mt-[10px] left-0 z-30 md:top-[0px] md:pt-[20px] pb-[0px]  bg-dark_blue`}
-      >
+      <div ref={monthsContainerRef} className={`flex gap-[20px] overflow-x-auto sticky top-[120px] mt-[10px] left-0 z-30 md:top-[0px] md:pt-[20px] pb-[0px]  bg-dark_blue`}>
         {allMonths.map((month) => (
           <Link
             key={month}
             to={month}
             spy={true}
             smooth={true}
-            offset={responsive >= 768 ? -140 : -250}
+            offset={responsive >= 768 ? -300 : -400}
             duration={500}
             ignoreCancelEvents={true}
             onSetActive={() => scrollElemet(month)}
@@ -181,11 +177,7 @@ const CalendarLayout = ({ data }) => {
               key={num}
               onClick={() => handleDayClick(num)}
               className={`cursor-pointer transition-all duration-500  h-[60px] ${
-                selectedDay === num
-                  ? 'text-white font-playfair text-[48px] translate-y-[-20px] underline'
-                  : hasEvent
-                  ? 'text-blue text-[32px] font-bitter'
-                  : 'text-gray text-[32px] font-bitter pointer-events-none'
+                selectedDay === num ? 'text-white font-playfair text-[48px] translate-y-[-20px] underline' : hasEvent ? 'text-blue text-[32px] font-bitter' : 'text-gray text-[32px] font-bitter pointer-events-none'
               } `}
             >
               {num}
@@ -198,15 +190,18 @@ const CalendarLayout = ({ data }) => {
         <SvgView type={cardView ? 1 : 2} />
       </div>
 
-      <div className={`grid  mt-[40px] ${cardView ? "gap-[40px]" : ""}`}>
+      <div className={`grid  mt-[40px] gap-[40px]`}>
         {Object.keys(calendarData || {}).map((month) => (
-          <Element name={month} key={month} className={`grid ${cardView ? ' md:grid-cols-2 lg:grid-cols-3 gap-[40px] ' : ' gap-[40px] md:gap-0'}`}>
-            {(calendarData[month] || []).map((event, idx) => (
-              <Element key={event.id} name={`event-${event.id}`}>
-                {cardView ? <EventCard data={event} /> : <EventCardTwo data={event} idx={idx} />}
-              </Element>
-            ))}
-          </Element>
+          <div>
+            <p className='font-playfair text-[45px] mb-[40px] hidden md:block'>{month}</p>
+            <Element name={month} key={month} className={`grid ${cardView ? ' md:grid-cols-2 lg:grid-cols-3 gap-[40px] ' : ' gap-[40px] md:gap-0'}`}>
+              {(calendarData[month] || []).map((event, idx) => (
+                <Element key={event.id} name={`event-${event.id}`}>
+                  {cardView ? <EventCard data={event} /> : <EventCardTwo data={event} idx={idx} />}
+                </Element>
+              ))}
+            </Element>
+          </div>
         ))}
       </div>
 

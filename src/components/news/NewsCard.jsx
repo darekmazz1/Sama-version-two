@@ -9,7 +9,7 @@ const NewsCard = ({ data }) => {
       <img className='w-full h-[188px] object-cover ' src={mapImage(map_data?.image)} alt='' />
 
       <div className='p-[24px]'>
-        <p className='text-[20px] font-roboto h-[55px] leading-7 overflow-auto font-[700]'>{map_data?.title}</p>
+        <p className='text-[20px] font-roboto  text_thre_lines leading-7 overflow-auto font-6700]'>{map_data?.title}</p>
 
         <p
           className='mt-[8px] font-roboto text-[16px] h-[110px] overflow-auto'

@@ -20,7 +20,7 @@ const EventCard = ({ data }) => {
       <img className='w-full h-[200px] object-cover' src={mapImage(map_data?.image)} alt='' />
 
       <div className='px-[26px] py-[42px]'>
-        <p className='text-[36px] font-playfair leading-10 h-[85px] overflow-auto'>{map_data?.event_title} </p>
+        <p className='text-[36px] font-playfair leading-1 text_thre_lines  '>{map_data?.event_title} </p>
 
         <div className='flex mt-[34px] gap-[40px]'>
           <div className='flex justify-center items-start gap-[10px]'>
@@ -44,8 +44,8 @@ const EventCard = ({ data }) => {
             <SvgMapAim />
           </div>
           <div className='flex-grow'>
-            <p className='text-[16px] uppercase font-inter'>{map_data?.venues}</p>
-            <p className='text-[14px] opacity-80 font-inter font-[300]'>{map_data?.venues_address}</p>
+            <p className='text-[16px] uppercase font-inter text_two_lines'>{map_data?.venues}</p>
+            <p className='text-[14px] opacity-80 font-inter font-[300] text_two_lines'>{map_data?.venues_address}</p>
           </div>
         </div>
 

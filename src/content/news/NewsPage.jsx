@@ -8,7 +8,6 @@ const NewsPage = ({ data }) => {
 
   const map_data = data?.data;
 
-
   const itemsPerPage = 6;
   const [page, setPage] = useState(1);
   const totalPages = Math.ceil(map_data.length / itemsPerPage);
@@ -34,8 +33,8 @@ const NewsPage = ({ data }) => {
 
   return (
     <section className='text-white container_all min-h-full'>
-      <div className='md:h-[1000px]'>
-        <div className='grid gap-[16px] mt-[40px] md:mt-[20px] md:grid-cols-2 lg:grid-cols-3 md:gap-[40px] '>
+      <div className='  md:h-[1600px] xl:h-[1000px]'>
+        <div className='grid gap-[16px] mt-[40px] md:mt-[20px] md:grid-cols-2 xl:grid-cols-3 md:gap-[40px] '>
           {paginatedData.map((data, index) => (
             <NewsCard key={index} data={data} />
           ))}
@@ -48,12 +47,7 @@ const NewsPage = ({ data }) => {
         {responsive >= 768 && (
           <div className='flex justify-center gap-[8px] overflow-auto  w-[80%]'>
             {Array.from({ length: totalPages }, (_, index) => (
-              <button
-                key={index + 1}
-                ref={(el) => (buttonRefs.current[index] = el)}
-                className={` text-[18px] rounded py-[6px] px-[12px] ${page === index + 1 ? ' border  rounded-none ' : ''}`}
-                onClick={() => handlePageChange(index + 1)}
-              >
+              <button key={index + 1} ref={(el) => (buttonRefs.current[index] = el)} className={` text-[18px] rounded py-[6px] px-[12px] ${page === index + 1 ? ' border  rounded-none ' : ''}`} onClick={() => handlePageChange(index + 1)}>
                 {index + 1}
               </button>
             ))}

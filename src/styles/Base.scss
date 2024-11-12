@@ -73,3 +73,30 @@
 ::-webkit-scrollbar-thumb {
   background-color: white;
 }
+
+.text_thre_lines {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  text-overflow: ellipsis;
+  height: 4.5em;
+}
+
+.text_two_lines {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+  height: 3.5em;
+}
+
+.text_two_lines_card_event_two {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+  height: 2.5em;
+}

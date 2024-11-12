@@ -23,7 +23,7 @@ const EventCardTwo = ({ data, idx }) => {
           <img className='w-[230px] h-[170px] object-cover hidden md:block' src={mapImage(map_data?.image)} alt='' />
 
           <div className=''>
-            <p className='text-[24px] font-playfair leading-7 h-[60px]  md:leading-10 overflow-auto md:text-[36px] md:h-[90px] md:max-w-[500px]'>
+            <p className='text-[24px] font-playfair leading-7   md:leading-10  md:text-[36px] text_two_lines_card_event_two  md:max-w-[600px]'>
               {map_data?.event_title}
             </p>
             <div className='flex justify-center items-start gap-[10px]'>
