@@ -1,8 +1,14 @@
 import useStoreModalShare from '../../store/useStoreModalShare';
 import SvgX from '../../svg/SvgX';
 
+const truncateText = (text, maxLength) => {
+  return text.length > maxLength ? text.slice(0, maxLength) + '...' : text;
+};
+
 const ModalShare = () => {
-  const { toggleState, active, title, description } = useStoreModalShare();
+  const { toggleState, active, title, description, url } = useStoreModalShare();
+
+  const trucateDescription = truncateText(description, 200);
 
   const openPopupCenter = (url, windowTitle, w, h) => {
     const left = window.innerWidth / 2 - w / 2;
@@ -10,34 +16,30 @@ const ModalShare = () => {
     return window.open(url, windowTitle, `width=${w},height=${h},top=${top},left=${left}`);
   };
   const shareViaFacebook = () => {
-    const popupUrl = `https://www.facebook.com/sharer/sharer.php?quote=${encodeURIComponent(title + ' - ' + description)}`;
+    const popupUrl = `https://www.facebook.com/sharer/sharer.php?quote=${encodeURIComponent(title + ' - ' + trucateDescription)}&u=${encodeURIComponent(url)}`;
     openPopupCenter(popupUrl, 'Facebook Share', 600, 400);
   };
 
   const shareViaWhatsApp = () => {
-    const text = encodeURIComponent(`${title}. ${description}.`);
+    const text = encodeURIComponent(`${title}. ${trucateDescription}. ${url}`);
     const popupUrl = `https://api.whatsapp.com/send?text=${text}`;
     openPopupCenter(popupUrl, 'WhatsApp Share', 600, 400);
   };
 
   const shareViaX = () => {
-    const text = encodeURIComponent(`${title} - ${description}`);
+    const text = encodeURIComponent(`${title} - ${trucateDescription} ${url}`);
     const popupUrl = `https://x.com/intent/post?text=${text}`;
     openPopupCenter(popupUrl, 'X (Twitter) Share', 600, 400);
   };
 
   const shareViaMail = () => {
     const subject = encodeURIComponent(title);
-    const body = encodeURIComponent(description);
+    const body = encodeURIComponent(`${trucateDescription}\n\n${url}`);
     window.location.href = `mailto:?subject=${subject}&body=${body}`;
   };
 
   return (
-    <div
-      className={`fixed right-0 w-full top-0 h-full z-50 text-white flex flex-col justify-center items-center transition-all duration-500 ${
-        active ? 'scale-100 opacity-100' : 'scale-0 opacity-0'
-      }`}
-    >
+    <div className={`fixed right-0 w-full top-0 h-full z-50 text-white flex flex-col justify-center items-center transition-all duration-500 ${active ? 'scale-100 opacity-100' : 'scale-0 opacity-0'}`}>
       <div className='bg-dark_blue relative py-[50px] h-[100dvh] md:h-auto z-20 w-full md:w-[700px]'>
         <div className='container_all'>
           <div onClick={toggleState} className='w-[30px] ml-auto cursor-pointer'>

@@ -58,6 +58,7 @@ const EventCard = ({ data }) => {
               toggleState();
               setTitle(map_data?.event_title);
               setDescription(map_data?.artists_performing);
+              setUrl(`https://test.samamusicarts.com/event/${data?.id}`);
             }}
             className='w-[40px] cursor-pointer'
           >
