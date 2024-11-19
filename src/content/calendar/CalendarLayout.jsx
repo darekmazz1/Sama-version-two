@@ -126,7 +126,6 @@ const CalendarLayout = ({ data }) => {
     }
   };
 
-  console.log(calendarData);
 
   return (
     <div className='text-white container_all'>

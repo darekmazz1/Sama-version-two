@@ -11,7 +11,7 @@ const map_data = data?.data?.attributes;
       map_data?.artists_performing && (
         <div class="md:w-[50%]">
           <h2 class='text-title_three font-bitter pt-[10px] md:pt-0'>Artists Performing</h2>
-          <p class='text-paragraph font-roboto mt-[16px] md:h-[260px] overflow-auto' set:html={parseText(map_data?.artists_performing)} />{' '}
+          <p class='text-paragraph font-roboto mt-[16px]  ' set:html={parseText(map_data?.artists_performing)} />{' '}
         </div>
       )
     }
@@ -20,7 +20,7 @@ const map_data = data?.data?.attributes;
       map_data?.event_schedule && (
         <div class="md:w-[50%]">
           <h2 class='text-title_three font-bitter mt-[40px] md:mt-0'>Event Schedule</h2>
-          <p class='text-paragraph font-roboto mt-[16px] md:h-[260px] overflow-auto' set:html={parseText(map_data?.event_schedule)} />
+          <p class='text-paragraph font-roboto mt-[16px]  ' set:html={parseText(map_data?.event_schedule)} />
         </div>
       )
     }

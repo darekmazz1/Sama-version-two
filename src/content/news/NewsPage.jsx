@@ -45,7 +45,7 @@ const NewsPage = ({ data }) => {
         <ArrowPagination style='rotate-[180deg]' onClick={() => page > 1 && setPage(page - 1)} text={'Previous'} responsive={responsive} />
 
         {responsive >= 768 && (
-          <div className='flex justify-center gap-[8px] overflow-auto  w-[80%]'>
+          <div className='flex justify-center gap-[8px]  w-[80%]'>
             {Array.from({ length: totalPages }, (_, index) => (
               <button key={index + 1} ref={(el) => (buttonRefs.current[index] = el)} className={` text-[18px] rounded py-[6px] px-[12px] ${page === index + 1 ? ' border  rounded-none ' : ''}`} onClick={() => handlePageChange(index + 1)}>
                 {index + 1}
