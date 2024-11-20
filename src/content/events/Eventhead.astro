@@ -6,6 +6,9 @@ import SvgMapAim from '../../svg/eventCard/SvgMapAim';
 import SvgArrow from '../../svg/news/SvgArrow';
 import Mediator from '../../components/buttons/Mediator';
 import { getDate, getDay, mapImage } from '../../utils/general';
+import SvgYoutube from '../../svg/socialmedia/SvgYoutube';
+import SvgInstagram from '../../svg/socialmedia/SvgInstagram';
+import SvgSpotify from '../../svg/socialmedia/SvgSpotify';
 
 const { data } = Astro.props;
 const map_data = data?.data?.attributes;
@@ -31,9 +34,7 @@ const map_data = data?.data?.attributes;
     <div class='md:flex container_all_desktop md:gap-[58px] items-center'>
       <div class='relative h-[200px] md:h-[361px] w-full max-w-[600px]'>
         <img class='w-full h-full object-cover' src={mapImage(map_data?.image)} alt='' />
-        <div
-          class='bg-white text-black absolute top-[19px] left-[19px] py-[8px] px-[15px] font-[700] rounded-[6px] opacity-80 font-inter flex justify-center items-center flex-col'
-        >
+        <div class='bg-white text-black absolute top-[19px] left-[19px] py-[8px] px-[15px] font-[700] rounded-[6px] opacity-80 font-inter flex justify-center items-center flex-col'>
           <p class='text-[16px] uppercase'>{getDate(map_data?.date)}</p>
           <p class='text-[40px] leading-10'>{getDay(map_data?.date)}</p>
         </div>
@@ -67,6 +68,32 @@ const map_data = data?.data?.attributes;
             <p class='text-[16px] uppercase font-inter'>{map_data?.venues}</p>
             <p class='text-[14px] opacity-80 font-inter font-[300]'>{map_data?.venues_address}</p>
           </div>
+        </div>
+
+        <div class='flex items-center gap-[10px] my-[32px] md:mb-0 flex-wrap'>
+          <a href={map_data?.youtube_link} target='black' class='border rounded-[8px] flex items-center gap-[12px] py-[5px] px-[24px] cursor-pointer hover:scale-105 transition-transform duration-200'>
+            <div class='w-[15px] md:w-[25px]'>
+              <SvgYoutube />
+            </div>
+
+            <p class='text-[14px] md:text-[15px] font-roboto font-[400]'>View</p>
+          </a>
+
+          <a href={map_data?.instagram_link} target='black' class='border rounded-[8px] flex items-center gap-[12px] py-[5px] px-[24px] cursor-pointer hover:scale-105 transition-transform duration-200'>
+            <div class='w-[15px] md:w-[25px]'>
+              <SvgInstagram />
+            </div>
+
+            <p class='text-[14px] md:text-[15px] font-roboto font-[400]'>Scroll</p>
+          </a>
+
+          <a href={map_data?.spotify_link} target='black' class='border rounded-[8px] flex items-center gap-[12px] py-[5px] px-[24px] cursor-pointer hover:scale-105 transition-transform duration-200'>
+            <div class='w-[15px] md:w-[25px]'>
+              <SvgSpotify />
+            </div>
+
+            <p class='text-[14px] md:text-[15px] font-roboto font-[400]'>Listen</p>
+          </a>
         </div>
 
         <div class='flex justify-between items-center mt-[16px] md:mt-[40px] md:justify-start md:gap-[40px]'>
