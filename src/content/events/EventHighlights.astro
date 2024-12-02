@@ -9,10 +9,10 @@ const map_data = data?.data?.attributes;
   <section class='text-white'>
     <div class='container_all'>
       {
-        map_data?.artists_performing && (
+        map_data?.highlights && (
           <div>
             <h2 class='text-title_three font-bitter pt-[44px]'>Highlights</h2>
-            <p class='text-paragraph font-roboto mt-[32px]' set:html={parseText(map_data?.highlights)} />
+            <p class='text-paragraph font-roboto pt-[32px]' set:html={parseText(map_data?.highlights)} />
           </div>
         )
       }
