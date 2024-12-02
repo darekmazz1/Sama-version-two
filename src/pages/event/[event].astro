@@ -22,7 +22,7 @@ const { data } = await GetInformation({ url: `events/${event}?populate[image][fi
 
 <Layout title='Welcome to Astro.'>
   <main class='bg-dark_blue pt-[120px] md:pt-0'>
-    <Eventhead data={data} />
+    <Eventhead data={data} idEvent={event}/>
     <EventInformation data={data} />
     <EventGallery data={data} />
     <EventHighlights data={data} />

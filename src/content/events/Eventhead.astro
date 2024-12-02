@@ -10,7 +10,7 @@ import SvgYoutube from '../../svg/socialmedia/SvgYoutube';
 import SvgInstagram from '../../svg/socialmedia/SvgInstagram';
 import SvgSpotify from '../../svg/socialmedia/SvgSpotify';
 
-const { data } = Astro.props;
+const { data, idEvent } = Astro.props;
 const map_data = data?.data?.attributes;
 ---
 
@@ -100,7 +100,7 @@ const map_data = data?.data?.attributes;
           <a target='_blank' href={map_data?.ticket_link}>
             <Button text='Get Tickets' style={''} onClick={null} />
           </a>
-          <Mediator client:idle />
+          <Mediator client:idle data={map_data} idEvent={idEvent} />
         </div>
       </div>
     </div>
