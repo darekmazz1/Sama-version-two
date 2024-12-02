@@ -97,7 +97,9 @@ const map_data = data?.data?.attributes;
         </div>
 
         <div class='flex justify-between items-center mt-[16px] md:mt-[40px] md:justify-start md:gap-[40px]'>
-          <Button text='Get Tickets' style={''} onClick={null} />
+          <a target='_blank' href={map_data?.ticket_link}>
+            <Button text='Get Tickets' style={''} onClick={null} />
+          </a>
           <Mediator client:idle />
         </div>
       </div>
