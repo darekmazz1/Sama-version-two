@@ -24,10 +24,10 @@ export function getDate(date) {
 }
 
 export function getDay(date) {
-  const options = { day: 'numeric' };
-  const day = new Date(date).toLocaleDateString('en-US', options);
+  const parsedDate = new Date(date);
+  const day = parsedDate.getUTCDate(); 
 
-  return day < 10 ? `0${day}` : day;
+  return day < 10 ? `0${day}` : `${day}`;
 }
 
 export function getYear(date) {
