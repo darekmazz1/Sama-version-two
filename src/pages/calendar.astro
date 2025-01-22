@@ -5,7 +5,9 @@ import CalendarLayout from '../content/calendar/CalendarLayout';
 import { GetInformation } from '../api/ApiGetInformation';
 // import data from '../json/Events.json';
 
-const { data } = await GetInformation({ url: 'events?populate[image][fields]=url' });
+const { data } = await GetInformation({
+  url: 'events?populate[image][fields]=url&pagination[pageSize]=9999',
+});
 ---
 
 <Layout title='calendar'>
