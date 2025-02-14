@@ -8,7 +8,7 @@ import EventGallery from '../../content/events/EventGallery.astro';
 import EventHighlights from '../../content/events/EventHighlights.astro';
 
 export async function getStaticPaths() {
-  const { data } = await GetInformation({ url: 'events?populate[image][fields]=url' });
+  const { data } = await GetInformation({ url: 'events?populate[image][fields]=url&pagination[pageSize]=9999' });
   const map_data = data?.data;
 
   return map_data.map((event) => ({
