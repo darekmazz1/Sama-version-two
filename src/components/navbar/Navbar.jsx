@@ -1,17 +1,18 @@
-import { useState } from 'react';
-import useWindowWidth from '../../hooks/useWindowWidth';
-import SvgBurgerMenu from '../../svg/navbar/SvgBurgerMenu';
-import SvgLogoMenu from '../../svg/navbar/SvgLogoMenu';
-import SvgX from '../../svg/SvgX';
+import { useState } from "react";
+import useWindowWidth from "../../hooks/useWindowWidth";
+import SvgBurgerMenu from "../../svg/navbar/SvgBurgerMenu";
+import SvgLogoMenu from "../../svg/navbar/SvgLogoMenu";
+import SvgX from "../../svg/SvgX";
 
 const Navbar = () => {
   const responsive = useWindowWidth();
 
   const fields = [
-    { name: 'Home', href: '/', id: '/' },
-    { name: 'Calendar', href: '/calendar', ids: ['/calendar', '/event'] },
-    { name: 'News', href: '/news', id: '/news' },
-    { name: 'About SAMA', href: '/about', id: '/about' },
+    { name: "Home", href: "/", id: "/" },
+    { name: "Calendar", href: "/calendar", ids: ["/calendar", "/event"] },
+    { name: "News", href: "/news", id: "/news" },
+    { name: "About SAMA", href: "/about", id: "/about" },
+    { name: "Donations", href: "https://samamusicarts.app.neoncrm.com/campaigns/spring-campaign-2025", a: "_blank", id: "/donations" },
   ];
 
   return (
@@ -54,7 +55,7 @@ const MenuMobile = ({ fields }) => {
 
       <div
         className={`fixed bg-dark_blue top-0 left-0 w-full z-50 h-[100dvh] flex justify-center items-center transition-all duration-500 ${
-          openedModal ? ' translate-x-0 opacity-100' : 'translate-x-[-100%] opacity-0'
+          openedModal ? " translate-x-0 opacity-100" : "translate-x-[-100%] opacity-0"
         }`}
       >
         <div className='container_all translate-y-[-100px]'>
@@ -88,15 +89,10 @@ const MenuDesktop = ({ fields }) => {
 
       <div className='flex gap-[40px]'>
         {fields.map((field, idx) => {
-          const isActive =
-            field.href === '/'
-              ? currentPath === '/'
-              : Array.isArray(field.ids)
-              ? field.ids.some((id) => currentPath.includes(id))
-              : currentPath.includes(field.id);
+          const isActive = field.href === "/" ? currentPath === "/" : Array.isArray(field.ids) ? field.ids.some((id) => currentPath.includes(id)) : currentPath.includes(field.id);
 
           return (
-            <a className={`text-[24px] font-bitter ${isActive ? 'text-blue' : ''}`} href={field.href} key={idx}>
+            <a className={`text-[24px] font-bitter ${isActive ? "text-blue" : ""}`} href={field.href} target={field.a === "_blank" ? "_blank" : "_self"} key={idx}>
               {field.name}
             </a>
           );
