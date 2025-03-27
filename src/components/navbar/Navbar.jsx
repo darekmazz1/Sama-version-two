@@ -65,7 +65,13 @@ const MenuMobile = ({ fields }) => {
 
           <div className='flex gap-[20px] flex-col '>
             {fields.map((field) => (
-              <a key={field.name} onClick={() => setOpenedModal(false)} className='text-white text-[36px] font-playfair' href={field.href}>
+              <a
+                key={field.name}
+                onClick={() => setOpenedModal(false)}
+                target={field.a === "_blank" ? "_blank" : "_self"}
+                className='text-white text-[36px] font-playfair'
+                href={field.href}
+              >
                 {field.name}
               </a>
             ))}
