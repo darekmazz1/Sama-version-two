@@ -12,7 +12,7 @@ const Navbar = () => {
     { name: "Calendar", href: "/calendar", ids: ["/calendar", "/event"] },
     { name: "News", href: "/news", id: "/news" },
     { name: "About SAMA", href: "/about", id: "/about" },
-    { name: "Donations", href: "https://samamusicarts.app.neoncrm.com/campaigns/spring-campaign-2025", a: "_blank", id: "/donations" },
+    { name: "Donate", href: "https://samamusicarts.app.neoncrm.com/campaigns/spring-campaign-2025", a: "_blank", id: "/donations" },
   ];
 
   return (
