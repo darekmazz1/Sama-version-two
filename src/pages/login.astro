@@ -1,0 +1,11 @@
+---
+import Layout from "../layouts/Layout.astro";
+import LayoutAuthentication from "../layouts/LayoutAuthentication";
+import FormLogIn from "../components/form/form-log-in";
+---
+
+<Layout title='Login'>
+  <LayoutAuthentication client:load>
+    <FormLogIn client:load />
+  </LayoutAuthentication>
+</Layout>

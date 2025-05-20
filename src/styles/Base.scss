@@ -1,4 +1,5 @@
-@import './swiper.scss';
+@import "./swiper.scss";
+@import "./loader.scss";
 
 * {
   padding: 0;
@@ -35,6 +36,10 @@
 
 .border_purple {
   border: 1px #914297 solid;
+}
+
+.border_pink {
+  border: 1px #c95dd2 solid;
 }
 
 .border_gray {

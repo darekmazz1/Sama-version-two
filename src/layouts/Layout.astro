@@ -1,26 +1,35 @@
 ---
-import '../styles/Base.scss';
-import Navbar from '../components/navbar/Navbar';
-import Footer from '../components/footer/Footer.astro';
-import ModalShare from '../components/general/ModalShare';
+import "../styles/Base.scss";
+import Navbar from "../components/navbar/Navbar";
+import Footer from "../components/footer/Footer.astro";
+import ModalShare from "../components/general/ModalShare";
+import { CheckEventsUser } from "../components/general/check-events-user";
+import { CheckUserLogin } from "../components/general/check-user-login";
 
-import '@fontsource/playfair-display';
-import '@fontsource/bitter';
-import '@fontsource/roboto';
-import '@fontsource/inter';
+import "@fontsource/playfair-display";
+import "@fontsource/bitter";
+import "@fontsource/roboto";
+import "@fontsource/inter";
+import { GetInformation } from "../api/ApiGetInformation";
 
 interface Props {
   title: string;
 }
 
-// const { title } = Astro.props;
+const { title } = Astro.props;
+
+const { data } = await GetInformation({ url: "footer?populate[social_media][populate][logo][fields]=url" });
+const { data: data_navbar } = await GetInformation({ url: "navbar?populate=*" });
 ---
 
 <!doctype html>
 <html lang='en'>
   <head>
     <meta charset='UTF-8' />
-    <meta name='description' content='Discover extraordinary music events in Seattle with the SAMA Calendar. From concerts to cultural showcases, find experiences for every music lover. Start exploring today!' />
+    <meta
+      name='description'
+      content='Discover extraordinary music events in Seattle with the SAMA Calendar. From concerts to cultural showcases, find experiences for every music lover. Start exploring today!'
+    />
     <meta name='viewport' content='width=device-width' />
     <link rel='icon' type='icon' href='/favicon.ico' />
     <meta name='generator' content={Astro.generator} />
@@ -29,9 +38,11 @@ interface Props {
     <script type='text/javascript' src='//script.crazyegg.com/pages/scripts/0121/9046.js' async='async'></script>
   </head>
   <body>
-    <Navbar client:load />
+    <Navbar client:only='react' data={data_navbar} />
     <ModalShare client:idle />
     <slot />
-    <Footer />
+    <Footer data={data} />
+    <CheckEventsUser client:only='react' />
+    <CheckUserLogin client:load />
   </body>
 </html>

@@ -1,0 +1,18 @@
+---
+import HeadArrowAndLetter from "../components/general/HeadArrowAndLetter.astro";
+import Layout from "../layouts/Layout.astro";
+import MyEventsSlider from "../content/my-events/my-events-slider";
+import ProfileSection from "../content/my-events/ProfileSection";
+import RedirectUser from "../components/general/redirect-user";
+---
+
+<Layout title='My Events'>
+  <div class='pt-[100px] md:pt-0 bg-dark_blue'>
+    <HeadArrowAndLetter text='My Events' arrow={false} />
+    <div class='container_all'>
+      <ProfileSection client:load />
+      <MyEventsSlider client:only='react' />
+      <RedirectUser client:only='react' />
+    </div>
+  </div>
+</Layout>

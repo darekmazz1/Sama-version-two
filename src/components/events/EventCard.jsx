@@ -1,14 +1,26 @@
-import { mapImage, getDate, getDay } from '../../utils/general';
-import SvgClock from '../../svg/eventCard/SvgClock';
-import SvgMapAim from '../../svg/eventCard/SvgMapAim';
-import Button from '../buttons/Button';
-import SvgShare from '../../svg/SvgShare';
-import useStoreModalShare from '../../store/useStoreModalShare';
+import { mapImage, getDate, getDay } from "../../utils/general";
+import SvgClock from "../../svg/eventCard/SvgClock";
+import SvgMapAim from "../../svg/eventCard/SvgMapAim";
+import Button from "../buttons/Button";
+import SvgShare from "../../svg/SvgShare";
+import useStoreModalShare from "../../store/useStoreModalShare";
+import SvgHeart from "../../svg/eventCard/SvgHeart";
+import useEventsStore from "../../store/useEventsStore";
+import useModalRegister from "../../store/useModalRegister";
 
-const EventCard = ({ data }) => {
-  const map_data = data?.attributes;
-
+const EventCard = ({ data, noMap = false, isToken = false }) => {
+  const map_data = !noMap ? data?.attributes : data;
+  const { isEventLiked, toggleLike } = useEventsStore();
   const { toggleState, setTitle, setDescription, setUrl } = useStoreModalShare();
+  const { openModal } = useModalRegister();
+
+  const handleLike = async () => {
+    if (isToken) {
+      await toggleLike(data?.id);
+    } else {
+      openModal();
+    }
+  };
 
   return (
     <div className='border bg-dark_blue relative'>
@@ -17,7 +29,7 @@ const EventCard = ({ data }) => {
         <p className='text-[40px] leading-10'>{getDay(map_data?.date)}</p>
       </div>
 
-      <img className='w-full h-[200px] object-cover' src={mapImage(map_data?.image)} alt='' />
+      <img className='w-full h-[200px] object-cover' src={!noMap ? mapImage(map_data?.image) : map_data?.image?.url} alt='' />
 
       <div className='px-[26px] py-[42px]'>
         <p className='text-[36px] font-playfair leading-1 text_thre_lines  '>{map_data?.event_title} </p>
@@ -53,16 +65,23 @@ const EventCard = ({ data }) => {
           <a href={`/event/${data?.id}`}>
             <Button text='More info' />
           </a>
-          <div
-            onClick={() => {
-              toggleState();
-              setTitle(map_data?.event_title);
-              setDescription(map_data?.artists_performing);
-              setUrl(`https://seattle.samamusicarts.org/event/${data?.id}`);
-            }}
-            className='w-[40px] cursor-pointer'
-          >
-            <SvgShare />
+
+          <div className='flex items-center gap-[16px]'>
+            <div
+              onClick={() => {
+                toggleState();
+                setTitle(map_data?.event_title);
+                setDescription(map_data?.artists_performing);
+                setUrl(`https://seattle.samamusicarts.org/event/${data?.id}`);
+              }}
+              className='w-[40px] cursor-pointer'
+            >
+              <SvgShare />
+            </div>
+
+            <div onClick={handleLike} className={`w-[32px] cursor-pointer ${isEventLiked(data?.id) ? "liked" : ""}`}>
+              <SvgHeart isLiked={isEventLiked(data?.id)} />
+            </div>
           </div>
         </div>
       </div>

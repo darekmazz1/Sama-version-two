@@ -19,7 +19,7 @@ export function mapImage(url) {
 
 export function getDate(date) {
   const options = { month: 'short' };
-  const formattedDate = new Date(date).toLocaleDateString('en-US', options);
+  const formattedDate = new Date(date + 'T12:00:00').toLocaleDateString('en-US', options);
   return formattedDate;
 }
 

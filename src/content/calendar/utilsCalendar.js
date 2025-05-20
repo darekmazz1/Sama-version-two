@@ -1,7 +1,6 @@
 export function groupEventsByMonth(events) {
-  const monthsOrder = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const monthsOrder = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-  // Inicializa el acumulador para cada año y mes
   const acc = {};
 
   events.forEach((event) => {
@@ -9,27 +8,23 @@ export function groupEventsByMonth(events) {
       return;
     }
 
-    const eventDate = new Date(event.attributes.date);
+    const eventDate = new Date(event.attributes.date + 'T12:00:00');
     const year = eventDate.getFullYear();
-    const month = eventDate.toLocaleString('en-US', { month: 'long' });
+    const month = eventDate.toLocaleString("en-US", { month: "long" });
 
-    // Inicializa el año si no existe en el acumulador
     if (!acc[year]) acc[year] = {};
 
-    // Inicializa el mes dentro del año si no existe
     if (!acc[year][month]) acc[year][month] = [];
 
-    // Agrega el evento al mes correspondiente dentro del año
     acc[year][month].push(event);
   });
 
-  // Ordena los eventos en cada mes y organiza el orden de los meses en cada año
   Object.keys(acc).forEach((year) => {
     acc[year] = monthsOrder.reduce((result, month) => {
       if (acc[year][month]) {
         result[month] = acc[year][month].sort((a, b) => {
-          const dateA = new Date(a.attributes.date);
-          const dateB = new Date(b.attributes.date);
+          const dateA = new Date(a.attributes.date + 'T12:00:00');
+          const dateB = new Date(b.attributes.date + 'T12:00:00');
           return dateA - dateB;
         });
       }

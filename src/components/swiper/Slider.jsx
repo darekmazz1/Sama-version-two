@@ -18,7 +18,7 @@ export default function Slider({ children, arrow_right, arrow_left }) {
         nextEl: `.${arrow_right}`,
         prevEl: `.${arrow_left}`,
       }}
-      className='swiper_general'
+      className='swiper_general '
     >
       {children}
     </Swiper>

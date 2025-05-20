@@ -1,17 +1,16 @@
 ---
-import HeaderHome from '../content/home/HeaderHome.astro';
-import Layout from '../layouts/Layout.astro';
-import EventsSliderHome from '../content/home/EventsSliderHome.astro';
-import { GetInformation } from '../api/ApiGetInformation';
-import LeadsHome from '../content/home/LeadsHome';
-import NewsHome from '../content/home/NewsHome.astro';
+import HeaderHome from "../content/home/HeaderHome.astro";
+import Layout from "../layouts/Layout.astro";
+import EventsSliderHome from "../content/home/EventsSliderHome.astro";
+import { GetInformation } from "../api/ApiGetInformation";
+import LeadsHome from "../content/home/LeadsHome";
+import NewsHome from "../content/home/NewsHome.astro";
 
-// import events_data from '../json/Events.json';
-import { getUpcomingEvents } from '../utils/general';
+import { getUpcomingEvents } from "../utils/general";
 
-const { data: events_data } = await GetInformation({ url: 'events?populate[image][fields]=url' });
+const { data: events_data } = await GetInformation({ url: "events?populate[image][fields]=url" });
 const { data: home_data } = await GetInformation({
-  url: 'home?populate[news][populate][image][fields]=url&populate[news][populate][user_photo][fields]=url',
+  url: "home?populate[news][populate][image][fields]=url&populate[news][populate][user_photo][fields]=url",
 });
 
 const upcomingEvents = getUpcomingEvents(events_data?.data);
@@ -19,14 +18,12 @@ const upcomingEvents = getUpcomingEvents(events_data?.data);
 
 <Layout title='Welcome to Astro.'>
   <main class='bg-dark_blue pt-[136px] md:pt-0 text-white'>
-    <div class='bg-cover relative' style={{ backgroundImage: 'url(/assets/bg_home_t.jpg)' }}>
+    <div class='bg-cover relative' style={{ backgroundImage: "url(/assets/bg_home_t.jpg)" }}>
       <div class='container_all relative z-10'>
         <HeaderHome data={home_data} />
         <EventsSliderHome data={upcomingEvents} />
         <LeadsHome client:idle data={home_data} />
       </div>
-
-      <!-- <div class='absolute top-0 left-0 md:hidden bg-dark_blue w-full h-full opacity-75 z-0'></div> -->
     </div>
     <div class='container_all'>
       <NewsHome data={home_data} />

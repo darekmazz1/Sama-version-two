@@ -1,0 +1,11 @@
+---
+import FormRecover from "../components/form/form-recover";
+import Layout from "../layouts/Layout.astro";
+import LayoutRecover from "../layouts/LayoutRecover.astro";
+---
+
+<Layout title='Recover password'>
+  <LayoutRecover>
+    <FormRecover client:load />
+  </LayoutRecover>
+</Layout>

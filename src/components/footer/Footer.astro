@@ -1,9 +1,10 @@
 ---
 import { GetInformation } from '../../api/ApiGetInformation';
 import SvgDegrade from '../../svg/footer/SvgDegrade.astro';
+
 import { mapImage } from '../../utils/general';
 
-const { data } = await GetInformation({ url: 'footer?populate[social_media][populate][logo][fields]=url' });
+const { data } = Astro.props;
 const map_data = data?.data?.attributes?.social_media;
 ---
 

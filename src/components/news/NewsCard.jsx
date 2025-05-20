@@ -12,7 +12,7 @@ const NewsCard = ({ data }) => {
         <p className='text-[20px] font-roboto  text_thre_lines leading-7  font-6700]'>{map_data?.title}</p>
 
         <p
-          className='mt-[8px] font-roboto text-[16px] h-[110px] overflow-hidden'
+          className='mt-[8px] font-roboto text-[16px] h-[120px] overflow-hidden'
           dangerouslySetInnerHTML={{ __html: parseText(map_data?.description) }}
         />
 

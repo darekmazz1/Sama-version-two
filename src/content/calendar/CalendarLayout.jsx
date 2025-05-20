@@ -1,10 +1,10 @@
-import { useState, useRef, useEffect } from 'react';
-import { getDaysEvents, groupEventsByMonth } from './utilsCalendar';
-import EventCard from '../../components/events/EventCard';
-import { Link, scroller, Element } from 'react-scroll';
-import useWindowWidth from '../../hooks/useWindowWidth';
-import SvgView from '../../svg/SvgView';
-import EventCardTwo from '../../components/events/EventCardTwo';
+import { useState, useRef, useEffect } from "react";
+import { getDaysEvents, groupEventsByMonth } from "./utilsCalendar";
+import EventCard from "../../components/events/EventCard";
+import { Link, scroller, Element } from "react-scroll";
+import useWindowWidth from "../../hooks/useWindowWidth";
+import SvgView from "../../svg/SvgView";
+import EventCardTwo from "../../components/events/EventCardTwo";
 
 const CalendarLayout = ({ data }) => {
   const responsive = useWindowWidth();
@@ -15,19 +15,27 @@ const CalendarLayout = ({ data }) => {
   const [cardView, setCardView] = useState(true);
   const [activeScroll, setActiveScroll] = useState(true);
 
+  const [token, setToken] = useState(null);
+
   const [calendarData, setCalendarData] = useState([]);
 
   const eventsByMonth = groupEventsByMonth(data);
   const monthsContainerRef = useRef(null);
   const numbers = getDaysEvents();
 
-  const allMonths = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  const allMonths = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
   useEffect(() => {
     if (eventsByMonth) {
       setCalendarData(eventsByMonth[selectedYear]);
     }
   }, [selectedYear]);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setToken(localStorage.getItem("token"));
+    }
+  }, []);
 
   useEffect(() => {
     if (selectedMonth && monthsContainerRef.current) {
@@ -45,7 +53,7 @@ const CalendarLayout = ({ data }) => {
 
         container.scrollTo({
           left: newScrollLeft,
-          behavior: 'smooth',
+          behavior: "smooth",
         });
       }
     }
@@ -78,7 +86,7 @@ const CalendarLayout = ({ data }) => {
 
     if (closestEvent) {
       const eventDate = new Date(closestEvent.attributes.date);
-      const monthName = eventDate.toLocaleString('default', { month: 'long' });
+      const monthName = eventDate.toLocaleString("default", { month: "long" });
 
       setSelectedMonth(monthName);
       setSelectedDay(eventDate.getDate());
@@ -87,7 +95,7 @@ const CalendarLayout = ({ data }) => {
         scroller.scrollTo(`event-${closestEvent.id}`, {
           duration: 800,
           delay: 0,
-          smooth: 'easeInOutQuart',
+          smooth: "easeInOutQuart",
           offset: -250,
         });
       }, 100);
@@ -109,7 +117,7 @@ const CalendarLayout = ({ data }) => {
         scroller.scrollTo(`event-${eventForDay.id}`, {
           duration: 800,
           delay: 0,
-          smooth: 'easeInOutQuart',
+          smooth: "easeInOutQuart",
           offset: -250,
         });
       }
@@ -126,13 +134,15 @@ const CalendarLayout = ({ data }) => {
     }
   };
 
-
   return (
     <div className='text-white container_all'>
       <div className='flex gap-[20px] items-center justify-center overflow-auto'>
         {Object.keys(eventsByMonth).map((year) => (
           <div key={year}>
-            <p onClick={() => setSelectedYear(year)} className={` cursor-pointer text-[46px] font-playfair mt-[40px] text-center ${String(year) === String(selectedYear) ? 'text-white' : 'text-blue'}`}>
+            <p
+              onClick={() => setSelectedYear(year)}
+              className={` cursor-pointer text-[46px] font-playfair mt-[40px] text-center ${String(year) === String(selectedYear) ? "text-white" : "text-blue"}`}
+            >
               {year}
             </p>
           </div>
@@ -156,10 +166,10 @@ const CalendarLayout = ({ data }) => {
             }}
             className={`month-button cursor-pointer transition-all duration-500 h-[60px] ${
               selectedMonth?.toLowerCase() === month?.toLowerCase()
-                ? 'text-white text-[46px] font-playfair translate-y-[-12px] font-[700] underline'
+                ? "text-white text-[46px] font-playfair translate-y-[-12px] font-[700] underline"
                 : Object.keys(calendarData).includes(month) && calendarData[month].length > 0
-                ? 'text-blue text-[32px] font-bitter'
-                : 'text-gray text-[32px] font-bitter pointer-events-none'
+                ? "text-blue text-[32px] font-bitter"
+                : "text-gray text-[32px] font-bitter pointer-events-none"
             }`}
           >
             {month}
@@ -176,7 +186,11 @@ const CalendarLayout = ({ data }) => {
               key={num}
               onClick={() => handleDayClick(num)}
               className={`cursor-pointer transition-all duration-500  h-[60px] ${
-                selectedDay === num ? 'text-white font-playfair text-[48px] translate-y-[-20px] underline' : hasEvent ? 'text-blue text-[32px] font-bitter' : 'text-gray text-[32px] font-bitter pointer-events-none'
+                selectedDay === num
+                  ? "text-white font-playfair text-[48px] translate-y-[-20px] underline"
+                  : hasEvent
+                  ? "text-blue text-[32px] font-bitter"
+                  : "text-gray text-[32px] font-bitter pointer-events-none"
               } `}
             >
               {num}
@@ -193,10 +207,10 @@ const CalendarLayout = ({ data }) => {
         {Object.keys(calendarData || {}).map((month) => (
           <div>
             <p className='font-playfair text-[45px] mb-[40px] hidden md:block'>{month}</p>
-            <Element name={month} key={month} className={`grid ${cardView ? ' md:grid-cols-2 lg:grid-cols-3 gap-[40px] ' : ' gap-[40px] md:gap-0'}`}>
+            <Element name={month} key={month} className={`grid ${cardView ? " md:grid-cols-2 lg:grid-cols-3 gap-[40px] " : " gap-[40px] md:gap-0"}`}>
               {(calendarData[month] || []).map((event, idx) => (
                 <Element key={event.id} name={`event-${event.id}`}>
-                  {cardView ? <EventCard data={event} /> : <EventCardTwo data={event} idx={idx} />}
+                  {cardView ? <EventCard isToken={token} data={event} /> : <EventCardTwo data={event} idx={idx} />}
                 </Element>
               ))}
             </Element>

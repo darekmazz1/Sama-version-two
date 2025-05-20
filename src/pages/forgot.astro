@@ -1,0 +1,11 @@
+---
+import Layout from "../layouts/Layout.astro";
+import FormForgot from "../components/form/form-forgot";
+import LayoutRecover from "../layouts/LayoutRecover.astro";
+---
+
+<Layout title='Forgot password'>
+  <LayoutRecover>
+    <FormForgot client:load />
+  </LayoutRecover>
+</Layout>
