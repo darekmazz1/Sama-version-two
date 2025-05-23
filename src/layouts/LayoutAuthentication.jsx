@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import SvgLogo from "../svg/SvgLogo";
 
-export default function LayoutAuthentication({ children }) {
+export default function LayoutAuthentication({ children, login }) {
   const [isLoginPage, setIsLoginPage] = useState(false);
   const [isRegisterPage, setIsRegisterPage] = useState(false);
 
@@ -21,6 +21,12 @@ export default function LayoutAuthentication({ children }) {
           <div className='w-[80%] md:w-[230px] lg:max-w-[276px] m-auto'>
             <SvgLogo />
           </div>
+
+          {login && (
+            <p className='text-[24px] font-[500] font-bitter leading-[140%] text-white max-w-[353px] m-auto text-center pt-[40px]'>
+              Sign up to save and share upcoming shows with your friends!
+            </p>
+          )}
         </div>
 
         <div className='lg:w-1/2 md:w-[60%] md:px-[40px] lg:px-[90px]'>

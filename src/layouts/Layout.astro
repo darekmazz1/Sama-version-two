@@ -35,9 +35,24 @@ const { data: data_navbar } = await GetInformation({ url: "navbar?populate=*" })
     <meta name='generator' content={Astro.generator} />
     <title>SAMA Seattle Calendar - Explore Unique Music Events</title>
 
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s) as HTMLScriptElement,
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-W4RS3FVP");
+    </script>
+
     <script type='text/javascript' src='//script.crazyegg.com/pages/scripts/0121/9046.js' async='async'></script>
   </head>
   <body>
+    <noscript><iframe src='https://www.googletagmanager.com/ns.html?id=GTM-W4RS3FVP' height='0' width='0' style='display:none;visibility:hidden'></iframe></noscript>
+
     <Navbar client:only='react' data={data_navbar} />
     <ModalShare client:idle />
     <slot />
