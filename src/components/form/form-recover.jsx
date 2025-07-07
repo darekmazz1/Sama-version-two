@@ -44,7 +44,7 @@ export default function FormRecover() {
 
     if (response.error) {
       setError({ general: response.error.error?.message });
-      console.log(response);
+
       setIsSend(false);
       setSuccess(false);
       return;

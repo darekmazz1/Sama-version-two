@@ -25,6 +25,8 @@ const CalendarLayout = ({ data }) => {
 
   const allMonths = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
+
+  //Comments
   useEffect(() => {
     if (eventsByMonth) {
       setCalendarData(eventsByMonth[selectedYear]);
@@ -207,7 +209,7 @@ const CalendarLayout = ({ data }) => {
         {Object.keys(calendarData || {}).map((month) => (
           <div>
             <p className='font-playfair text-[45px] mb-[40px] hidden md:block'>{month}</p>
-            <Element name={month} key={month} className={`grid ${cardView ? " md:grid-cols-2 lg:grid-cols-3 gap-[40px] " : " gap-[40px] md:gap-0"}`}>
+            <Element name={month} key={month} className={`grid ${cardView ? " md:grid-cols-2 lg:grid-cols-3 gap-[40px]" : "gap-[40px] md:gap-0"}`}>
               {(calendarData[month] || []).map((event, idx) => (
                 <Element key={event.id} name={`event-${event.id}`}>
                   {cardView ? <EventCard isToken={token} data={event} /> : <EventCardTwo data={event} idx={idx} />}
