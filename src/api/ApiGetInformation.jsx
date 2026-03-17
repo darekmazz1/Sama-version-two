@@ -1,7 +1,7 @@
 import axios from "axios";
 
-export const ULR_BACKEND = "http://localhost:1337/api/";
-// export const ULR_BACKEND = "https://kind-courtesy-production.up.railway.app/api/";
+// export const ULR_BACKEND = "http://localhost:1337/api/";
+export const ULR_BACKEND = "https://kind-courtesy-production.up.railway.app/api/";
 
 export const GetInformation = async ({ url }) => {
   if (!url) return;
