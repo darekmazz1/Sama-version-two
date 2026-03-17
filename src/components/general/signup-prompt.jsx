@@ -2,21 +2,23 @@ import { useEffect, useState } from "react";
 import SvgX from "../../svg/SvgX";
 
 const DISMISSED_KEY = "signup_prompt_dismissed";
+const SEVEN_DAYS_MS = 7 * 24 * 60 * 60 * 1000;
 
 const SignupPrompt = () => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     const token = localStorage.getItem("token");
-    const dismissed = localStorage.getItem(DISMISSED_KEY);
-    if (!token && !dismissed) {
+    const dismissedAt = localStorage.getItem(DISMISSED_KEY);
+    const expired = !dismissedAt || Date.now() - Number(dismissedAt) > SEVEN_DAYS_MS;
+    if (!token && expired) {
       const timer = setTimeout(() => setVisible(true), 10000);
       return () => clearTimeout(timer);
     }
   }, []);
 
   const dismiss = () => {
-    localStorage.setItem(DISMISSED_KEY, "1");
+    localStorage.setItem(DISMISSED_KEY, String(Date.now()));
     setVisible(false);
   };
 
