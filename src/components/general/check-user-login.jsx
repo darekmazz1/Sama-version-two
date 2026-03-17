@@ -1,27 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Button from "../buttons/Button";
 import SvgX from "../../svg/SvgX";
 import useModalRegister from "../../store/useModalRegister";
 
 export const CheckUserLogin = () => {
   const { isOpen, openModal, closeModal } = useModalRegister();
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const storedToken = localStorage.getItem("token");
-
-      if (!storedToken) {
-        const interval = setInterval(() => {
-          const currentToken = localStorage.getItem("token");
-          if (!currentToken) {
-            openModal();
-          }
-        }, 120000);
-
-        return () => clearInterval(interval);
-      }
-    }
-  }, []);
 
   useEffect(() => {
     if (isOpen) {

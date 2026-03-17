@@ -37,6 +37,7 @@ export function getYear(date) {
 
 export function getUpcomingEvents(events) {
   const today = new Date();
+  today.setHours(0, 0, 0, 0);
 
   const upcomingEvents = events.filter((event) => {
     const eventDate = new Date(event.attributes.date);

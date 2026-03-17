@@ -6,14 +6,14 @@ import { GetInformation } from "../api/ApiGetInformation";
 import LeadsHome from "../content/home/LeadsHome";
 import NewsHome from "../content/home/NewsHome.astro";
 
-import { getUpcomingEvents } from "../utils/general";
 
-const { data: events_data } = await GetInformation({ url: "events?populate[image][fields]=url" });
+const today = new Date().toISOString().split('T')[0];
+const { data: events_data } = await GetInformation({ url: `events?populate[image][fields]=url&filters[date][$gte]=${today}&sort=date:asc&pagination[pageSize]=6` });
 const { data: home_data } = await GetInformation({
   url: "home?populate[news][populate][image][fields]=url&populate[news][populate][user_photo][fields]=url",
 });
 
-const upcomingEvents = getUpcomingEvents(events_data?.data);
+const upcomingEvents = events_data?.data ?? [];
 ---
 
 <Layout title='Welcome to Astro.'>

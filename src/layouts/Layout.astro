@@ -51,6 +51,10 @@ const { data: data_navbar } = await GetInformation({ url: "navbar?populate=*" })
     <script type='text/javascript' src='//script.crazyegg.com/pages/scripts/0121/9046.js' async='async'></script>
   </head>
   <body>
+    <div id='page-loader'>
+      <div class='page-loader-spinner'></div>
+    </div>
+
     <noscript><iframe src='https://www.googletagmanager.com/ns.html?id=GTM-W4RS3FVP' height='0' width='0' style='display:none;visibility:hidden'></iframe></noscript>
 
     <Navbar client:only='react' data={data_navbar} />
@@ -59,5 +63,15 @@ const { data: data_navbar } = await GetInformation({ url: "navbar?populate=*" })
     <Footer data={data} />
     <CheckEventsUser client:only='react' />
     <CheckUserLogin client:load />
+
+    <script>
+      window.addEventListener("load", () => {
+        const loader = document.getElementById("page-loader");
+        if (loader) {
+          loader.classList.add("hidden");
+          setTimeout(() => loader.remove(), 400);
+        }
+      });
+    </script>
   </body>
 </html>

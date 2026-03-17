@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import HeadArrowAndLetter from "../components/general/HeadArrowAndLetter.astro";
 import CalendarLayout from "../content/calendar/CalendarLayout";
 import { GetInformation } from "../api/ApiGetInformation";
-import RedirectUser from "../components/general/redirect-user";
+import SignupPrompt from "../components/general/signup-prompt";
 
 const { data } = await GetInformation({
   url: "events?populate[image][fields]=url&pagination[pageSize]=9999",
@@ -14,6 +14,6 @@ const { data } = await GetInformation({
   <main class='bg-dark_blue pt-[120px] md:pt-0'>
     <HeadArrowAndLetter text='Event Calendar' arrow={false} />
     <CalendarLayout client:load data={data?.data} />
-    <RedirectUser client:only='react' />
+    <SignupPrompt client:only='react' />
   </main>
 </Layout>

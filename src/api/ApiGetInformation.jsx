@@ -1,7 +1,7 @@
 import axios from "axios";
 
-// export const ULR_BACKEND = "http://localhost:1337/api/";
-export const ULR_BACKEND = "https://kind-courtesy-production.up.railway.app/api/";
+export const ULR_BACKEND = "http://localhost:1337/api/";
+// export const ULR_BACKEND = "https://kind-courtesy-production.up.railway.app/api/";
 
 export const GetInformation = async ({ url }) => {
   if (!url) return;
@@ -14,12 +14,14 @@ export const GetInformation = async ({ url }) => {
   }
 };
 
-export const RegisterUser = async ({ email, username, password }) => {
+export const RegisterUser = async ({ email, username, password, firstName, lastName }) => {
   try {
     const response = await axios.post(`${ULR_BACKEND}auth/local/register`, {
       email,
       password,
       username,
+      first_name: firstName,
+      last_name: lastName,
     });
     return response.data;
   } catch (error) {

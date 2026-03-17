@@ -10,6 +10,8 @@ export default function FormRegister() {
   const [success, setSuccess] = useState(false);
 
   const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
     email: "",
     username: "",
     password: "",
@@ -17,6 +19,8 @@ export default function FormRegister() {
   });
 
   const [error, setError] = useState({
+    firstName: null,
+    lastName: null,
     email: null,
     username: null,
     password: null,
@@ -31,18 +35,23 @@ export default function FormRegister() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSend(true);
+    const checkFirstName = validateName(formData.firstName);
+    const checkLastName = validateName(formData.lastName);
     const checkEmail = validateEmail(formData.email);
     const checkUsername = validateName(formData.username);
     const checkPassword = validatePassword(formData.password);
     const samePassword = formData.password === formData.confirmPassword;
 
-    if (checkEmail || checkUsername || checkPassword || !samePassword) {
+    if (checkFirstName || checkLastName || checkEmail || checkUsername || checkPassword || !samePassword) {
       setError({
+        firstName: checkFirstName,
+        lastName: checkLastName,
         email: checkEmail,
         username: checkUsername,
         password: checkPassword,
         confirmPassword: !samePassword ? "Las contraseñas no coinciden" : null,
       });
+      setIsSend(false);
       return;
     }
 
@@ -51,6 +60,8 @@ export default function FormRegister() {
         email: formData.email,
         username: formData.username,
         password: formData.password,
+        firstName: formData.firstName,
+        lastName: formData.lastName,
       });
 
       if (response.error) {
@@ -71,6 +82,8 @@ export default function FormRegister() {
       {!success ? (
         <>
           <form className='grid gap-[24px]' onSubmit={handleSubmit}>
+            <CommonInput label='First Name' type='text' placeholder='John' name='firstName' onChange={handleChange} error={error.firstName} />
+            <CommonInput label='Last Name' type='text' placeholder='Doe' name='lastName' onChange={handleChange} error={error.lastName} />
             <CommonInput label='Email address' type='email' placeholder='example@gmail.com' name='email' onChange={handleChange} error={error.email} />
             <CommonInput label='Username' type='text' placeholder='username' name='username' onChange={handleChange} error={error.username} />
             <CommonInput label='Create password' type='password' placeholder='must be 8 characters' name='password' onChange={handleChange} error={error.password} />

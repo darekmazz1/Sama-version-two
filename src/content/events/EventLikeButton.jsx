@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import useEventsStore from "../../store/useEventsStore";
+import useModalRegister from "../../store/useModalRegister";
 import SvgHeart from "../../svg/eventCard/SvgHeart";
 
 export default function EventLikeButton({ idEvent }) {
   const { isEventLiked, toggleLike } = useEventsStore();
+  const { openModal } = useModalRegister();
   const [token, setToken] = useState(null);
 
   useEffect(() => {
