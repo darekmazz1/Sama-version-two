@@ -84,7 +84,7 @@ export default function FormRegister() {
     <>
       {!success ? (
         <>
-          <form className='grid gap-[24px]' onSubmit={handleSubmit}>
+          <form className='grid gap-[24px]' method="post" onSubmit={handleSubmit}>
             <CommonInput
               label='First Name'
               type='text'
