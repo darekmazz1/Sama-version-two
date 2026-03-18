@@ -18,8 +18,10 @@ interface Props {
 
 const { title } = Astro.props;
 
-const { data } = await GetInformation({ url: "footer?populate[social_media][populate][logo][fields]=url" });
-const { data: data_navbar } = await GetInformation({ url: "navbar?populate=*" });
+const footer_res = await GetInformation({ url: "footer?populate[social_media][populate][logo][fields]=url" });
+const navbar_res = await GetInformation({ url: "navbar?populate=*" });
+const data = footer_res?.data ?? null;
+const data_navbar = navbar_res?.data ?? null;
 ---
 
 <!doctype html>
