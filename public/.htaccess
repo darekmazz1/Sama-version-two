@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# Serve _astro static files directly — do NOT rewrite to index.html
+RewriteRule ^_astro/ - [L]
+
+# Serve existing files and directories directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite everything else to the correct HTML page for Astro routing
+RewriteRule ^(.*)$ /$1.html [L]
