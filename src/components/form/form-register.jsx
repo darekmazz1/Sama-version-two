@@ -65,15 +65,18 @@ export default function FormRegister() {
       });
 
       if (response.error) {
-        setError({ general: response.error.error?.message });
+        const msg =
+          response.error.error?.message || response.error.message || "Error al registrarse, intenta de nuevo";
+        setError({ general: msg });
         setIsSend(false);
         setSuccess(false);
       } else {
         setIsSend(false);
         setSuccess(true);
       }
-    } catch (error) {
-      setError({ general: "error registering user try again" });
+    } catch (err) {
+      setError({ general: "Error al registrarse, intenta de nuevo" });
+      setIsSend(false);
     }
   };
 
@@ -82,22 +85,72 @@ export default function FormRegister() {
       {!success ? (
         <>
           <form className='grid gap-[24px]' onSubmit={handleSubmit}>
-            <CommonInput label='First Name' type='text' placeholder='John' name='firstName' onChange={handleChange} error={error.firstName} />
-            <CommonInput label='Last Name' type='text' placeholder='Doe' name='lastName' onChange={handleChange} error={error.lastName} />
-            <CommonInput label='Email address' type='email' placeholder='example@gmail.com' name='email' onChange={handleChange} error={error.email} />
-            <CommonInput label='Username' type='text' placeholder='username' name='username' onChange={handleChange} error={error.username} />
-            <CommonInput label='Create password' type='password' placeholder='must be 8 characters' name='password' onChange={handleChange} error={error.password} />
-            <CommonInput label='Confirm password' type='password' placeholder='repeat password' name='confirmPassword' onChange={handleChange} error={error.confirmPassword} />
+            <CommonInput
+              label='First Name'
+              type='text'
+              placeholder='John'
+              name='firstName'
+              onChange={handleChange}
+              error={error.firstName}
+            />
+            <CommonInput
+              label='Last Name'
+              type='text'
+              placeholder='Doe'
+              name='lastName'
+              onChange={handleChange}
+              error={error.lastName}
+            />
+            <CommonInput
+              label='Email address'
+              type='email'
+              placeholder='example@gmail.com'
+              name='email'
+              onChange={handleChange}
+              error={error.email}
+            />
+            <CommonInput
+              label='Username'
+              type='text'
+              placeholder='username'
+              name='username'
+              onChange={handleChange}
+              error={error.username}
+            />
+            <CommonInput
+              label='Create password'
+              type='password'
+              placeholder='must be 8 characters'
+              name='password'
+              onChange={handleChange}
+              error={error.password}
+            />
+            <CommonInput
+              label='Confirm password'
+              type='password'
+              placeholder='repeat password'
+              name='confirmPassword'
+              onChange={handleChange}
+              error={error.confirmPassword}
+            />
 
             <p className='text-pink_two text-[14px] font-inter font-[400] pt-[7px]'>{error.general}</p>
             <div className='pt-[38px]'>
-              <Button client:visible text='Register' style={`text-white w-full ${isSend ? "opacity-50 cursor-not-allowed" : ""}`} type_button={2} onClick={null} />
+              <Button
+                client:visible
+                text='Register'
+                style={`text-white w-full ${isSend ? "opacity-50 cursor-not-allowed" : ""}`}
+                type_button={2}
+                onClick={null}
+              />
             </div>
           </form>
 
           <div className='flex items-center justify-center w-full  pt-[38px] '>
             <div className='w-full border bg-white'></div>
-            <p className='px-4 w-full text-white text-[14px] font-inter font-[400] whitespace-nowrap'>Or Register with</p>
+            <p className='px-4 w-full text-white text-[14px] font-inter font-[400] whitespace-nowrap'>
+              Or Register with
+            </p>
             <div className='w-full border bg-white'></div>
           </div>
 
@@ -116,7 +169,9 @@ export default function FormRegister() {
         </>
       ) : (
         <>
-          <p className='text-[36px] font-[400] leading-[120%] font-playfair text-white md:text-center'>Please check your email</p>
+          <p className='text-[36px] font-[400] leading-[120%] font-playfair text-white md:text-center'>
+            Please check your email
+          </p>
           <p className='text-white font-roboto text-[16px] leading-[150%] font-[400] pt-[21px] md:text-center'>
             We’ve sent a link to <span className='text-light_pruple_hover'> {formData.email}</span>
           </p>

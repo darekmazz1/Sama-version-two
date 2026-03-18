@@ -11,7 +11,7 @@ export const GetInformation = async ({ url }) => {
   } catch (error) {
     console.error("Error fetching data:", error);
     return null;
-  }
+  }Li8s
 };
 
 export const RegisterUser = async ({ email, username, password, firstName, lastName }) => {
