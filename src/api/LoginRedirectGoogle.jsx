@@ -28,9 +28,11 @@ export default function LoginRedirectGoogle() {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ firstName, lastName, email: user.email }),
-        }).catch(() => {});
-
-        setTimeout(() => (window.location.href = "/"), 100);
+        })
+          .catch(() => {})
+          .finally(() => {
+            window.location.href = "/";
+          });
       })
       .catch((err) => {
         console.log(err);
