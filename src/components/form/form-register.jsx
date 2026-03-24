@@ -35,6 +35,15 @@ export default function FormRegister() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSend(true);
+
+    let recaptchaToken = null;
+    try {
+      recaptchaToken = await window.grecaptcha.execute("6LerrJYsAAAAACrAOsqqnDmS2TngLxvnfs59cXDP", { action: "register" });
+    } catch {
+      setError({ general: "Error de verificación, intenta de nuevo" });
+      setIsSend(false);
+      return;
+    }
     const checkFirstName = validateName(formData.firstName);
     const checkLastName = validateName(formData.lastName);
     const checkEmail = validateEmail(formData.email);
@@ -62,6 +71,7 @@ export default function FormRegister() {
         password: formData.password,
         firstName: formData.firstName,
         lastName: formData.lastName,
+        recaptchaToken,
       });
 
       if (response.error) {

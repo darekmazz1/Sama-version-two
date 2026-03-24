@@ -14,14 +14,15 @@ export const GetInformation = async ({ url }) => {
   }
 };
 
-export const RegisterUser = async ({ email, username, password, firstName, lastName }) => {
+export const RegisterUser = async ({ email, username, password, firstName, lastName, recaptchaToken }) => {
   try {
-    const response = await axios.post(`${ULR_BACKEND}auth/local/register`, {
+    const response = await axios.post(`${ULR_BACKEND}safe-register`, {
       email,
       password,
       username,
       first_name: firstName,
       last_name: lastName,
+      recaptchaToken,
     });
     return response.data;
   } catch (error) {
