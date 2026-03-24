@@ -20,19 +20,15 @@ export default function LoginRedirectGoogle() {
         localStorage.setItem("user", JSON.stringify(res.user));
 
         const user = res.user;
-        const isNewUser = user.createdAt && (Date.now() - new Date(user.createdAt).getTime()) < 120000;
+        const parts = (user.username || "").trim().split(" ");
+        const firstName = user.first_name || parts[0] || "";
+        const lastName = user.last_name || parts.slice(1).join(" ") || "";
 
-        if (isNewUser) {
-          const parts = (user.username || "").trim().split(" ");
-          const firstName = user.first_name || parts[0] || "";
-          const lastName = user.last_name || parts.slice(1).join(" ") || "";
-
-          fetch(`${ULR_BACKEND}neon-sync`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ firstName, lastName, email: user.email }),
-          }).catch(() => {});
-        }
+        fetch(`${ULR_BACKEND}neon-sync`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ firstName, lastName, email: user.email }),
+        }).catch(() => {});
 
         setTimeout(() => (window.location.href = "/"), 100);
       })
