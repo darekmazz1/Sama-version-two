@@ -19,20 +19,7 @@ export default function LoginRedirectGoogle() {
         localStorage.setItem("token", res.jwt);
         localStorage.setItem("user", JSON.stringify(res.user));
 
-        const user = res.user;
-        const parts = (user.username || "").trim().split(" ");
-        const firstName = user.first_name || parts[0] || "";
-        const lastName = user.last_name || parts.slice(1).join(" ") || "";
-
-        fetch(`${ULR_BACKEND}neon-sync`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ firstName, lastName, email: user.email }),
-        })
-          .catch(() => {})
-          .finally(() => {
-            window.location.href = "/";
-          });
+        setTimeout(() => (window.location.href = "/"), 100);
       })
       .catch((err) => {
         console.log(err);
