@@ -10,15 +10,31 @@ on:
 permissions:
   contents: read
 
+# Only one deploy may touch the FTP server at a time. Strapi often fires many
+# webhooks within seconds; overlapping uploads corrupted the server-side sync
+# state and caused "553 Can't open that file" on every run since 2026-10-19.
+# A running deploy is never cancelled mid-upload; newer triggers replace any
+# queued one, so the latest content still gets deployed.
+concurrency:
+  group: ftp-deploy
+  cancel-in-progress: false
+
+env:
+  # Fresh state file name: the old .ftp-deploy-sync-state.json on the server
+  # lists folders that no longer exist. With a new name, the first run uploads
+  # every file again (deleting nothing), then later runs sync as usual.
+  FTP_STATE_NAME: .ftp-deploy-sync-state-v2.json
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: 20
           cache: 'npm'
@@ -39,6 +55,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
           server-dir: /
+          state-name: ${{ env.FTP_STATE_NAME }}
 
       - name: Wait before retry 1
         if: steps.deploy1.outcome == 'failure'
@@ -55,6 +72,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
           server-dir: /
+          state-name: ${{ env.FTP_STATE_NAME }}
 
       - name: Wait before retry 2
         if: steps.deploy1.outcome == 'failure' && steps.deploy2.outcome == 'failure'
@@ -69,3 +87,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
           server-dir: /
+          state-name: ${{ env.FTP_STATE_NAME }}
